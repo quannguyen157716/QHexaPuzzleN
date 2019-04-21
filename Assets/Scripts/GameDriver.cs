@@ -8,7 +8,7 @@ public class GameDriver : MonoBehaviour {
 	Vector3 pos1;
 	// Use this for initialization
 	void Start () {
-		pos1=new Vector3(-0.01f,-2.5f,3);
+		pos1=new Vector3(-0.01f,-2.5f);
 		Instantiate(block,pos1,Quaternion.identity);
 	}
 	
