@@ -1,13 +1,9 @@
 https://www.youtube.com/watch?v=7QomGnOyQoY
 
-float camDistance=0;
- 	private void OnMouseDown()
- 	{
-    	camDistance = Vector3.Distance(transform.position, Camera.main.transform.position);
- 	}
- 	private void OnMouseDrag()
-    {
-    	Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, camDistance);
-    	Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);// this find using tag
-    	transform.position = mousePosition;
-    }
+float distance = 2;
+    void OnMouseDrag()
+	{
+        Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance);
+        Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
+        transform.position = objPosition;
+	}
