@@ -52,10 +52,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BoardGenerator.cs" />
-     <Compile Include="Assets\Scripts\Dragging.cs" />
+     <Compile Include="Assets\Scripts\BoardOverLapping.cs" />
+     <Compile Include="Assets\Scripts\DragObject.cs" />
      <Compile Include="Assets\Scripts\GameDriver.cs" />
      <Compile Include="Assets\Scripts\GetShit.cs" />
-     <Compile Include="Assets\Scripts\TriangleGenerator.cs" />
+     <Compile Include="Assets\Scripts\RayCast.cs" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2017.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
