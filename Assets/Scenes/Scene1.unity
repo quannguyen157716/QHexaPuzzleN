@@ -447,9 +447,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5}
-      - {x: -0.4330127, y: -0.25000003}
-      - {x: 0.43301272, y: -0.24999996}
+    - - {x: 0.024004577, y: 0.86387134}
+      - {x: -0.71558905, y: -0.4262745}
+      - {x: 0.76644963, y: -0.4204874}
 --- !u!114 &1638769359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +675,7 @@ Prefab:
     - target: {fileID: 212249338187594060, guid: 32e5a7aea54604b97bcf86af190dc14b,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 60072157969139504, guid: 32e5a7aea54604b97bcf86af190dc14b,
         type: 2}
