@@ -181,6 +181,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 26443773}
+--- !u!1001 &561818501
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4705400496653226, guid: 4173b12af97404ee1892dfa575c8668c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.497
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705400496653226, guid: 4173b12af97404ee1892dfa575c8668c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.163
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705400496653226, guid: 4173b12af97404ee1892dfa575c8668c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705400496653226, guid: 4173b12af97404ee1892dfa575c8668c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705400496653226, guid: 4173b12af97404ee1892dfa575c8668c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705400496653226, guid: 4173b12af97404ee1892dfa575c8668c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705400496653226, guid: 4173b12af97404ee1892dfa575c8668c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705400496653226, guid: 4173b12af97404ee1892dfa575c8668c, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4173b12af97404ee1892dfa575c8668c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1135230878
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +492,17 @@ PolygonCollider2D:
     - - {x: 0.024004577, y: 0.86387134}
       - {x: -0.71558905, y: -0.4262745}
       - {x: 0.76644963, y: -0.4204874}
+--- !u!114 &1638769358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1638769353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774169c6defbb4f8ca1e73779590013b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1638769359
 MonoBehaviour:
   m_ObjectHideFlags: 0
