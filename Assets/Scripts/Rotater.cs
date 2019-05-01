@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class Rotater : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
-
+    void Update()
+	{}
 	void OnMouseDown()
 	{
+		if(!enabled) 
+		return;
+		else
 		transform.Rotate(0,0,60);
 	}
 }
