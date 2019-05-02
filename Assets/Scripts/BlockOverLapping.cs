@@ -25,19 +25,19 @@ public class BlockOverLapping : MonoBehaviour {
 			{
 				if(Drop())
 				{
-					//block.color=Color.blue;
 					SetColor(gameDriverScript.M_color);
+					Debug.Log("Set color");
 					fill=true;
 				}
 			}
 		}		
-		//Fit();
 	}
 
 	bool Drop()
 	{
+		
 		if(Input.GetMouseButtonUp(0))
-		return true;
+		return true;	
 		else
 		return false;
 	}

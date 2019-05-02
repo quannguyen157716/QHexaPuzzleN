@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 	Color m_color; //color to change the board
 	bool rotating=true; //determine when a block can rotate
+	bool drop=false;
+	bool fit=false;
 	public GameObject[] block =new GameObject[8];
 	public GameObject[] respawnPoint =new GameObject[3];
 	//Vector2 pos1;
@@ -17,8 +19,9 @@ public class GameController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-		
+	void Update () 
+	{
+		 
 	}
 
 
@@ -32,5 +35,17 @@ public class GameController : MonoBehaviour {
 	{
 		get{return rotating;}
 		set{rotating=value;}
+	}
+
+	public bool Drop
+	{
+		get{return drop;}
+		set{drop=value;}
+	}
+
+	public bool Fit
+	{
+		get{return fit;}
+		set{fit=value;}
 	}
 }

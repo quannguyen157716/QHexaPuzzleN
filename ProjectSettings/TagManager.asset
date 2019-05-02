@@ -14,8 +14,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Board
+  - Block
   - 
   - 
   - 
@@ -43,8 +43,8 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Board
-    uniqueID: 2723489499
+    uniqueID: 1784066399
     locked: 0
   - name: Block
-    uniqueID: 876687077
+    uniqueID: 2164899665
     locked: 0

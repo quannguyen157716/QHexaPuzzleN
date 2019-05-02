@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212851506803368802}
   - component: {fileID: 60126881357227138}
   - component: {fileID: 114928071372471082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Board_Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1191757614723050}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -113,11 +113,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1571477797
+  m_SortingLayerID: 1784066399
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 320e4a44eb032fb4db56df1599e4febc, type: 3}
-  m_Color: {r: 0.022058845, g: 0.022058845, b: 0.022058845, a: 0.328}
+  m_Color: {r: 0.17955235, g: 0.18455134, b: 0.9044118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
