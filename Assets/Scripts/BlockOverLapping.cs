@@ -23,6 +23,7 @@ public class BlockOverLapping : MonoBehaviour {
 		{
 			if(Fit())
 			{
+				Debug.Log("Fit");
 				if(Drop())
 				{
 					SetColor(gameDriverScript.M_color);

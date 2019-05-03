@@ -21,7 +21,19 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		 
+		/*int layerMask=1 << 9;
+		if (Input.GetMouseButton(0)) 
+		 {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+            Debug.DrawRay(mousePos, Vector3.forward*10, Color.green);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, 10, layerMask);
+            if (hit.collider != null) 
+			{
+                Debug.Log(hit.collider.gameObject.name);
+				hit.collider.gameObject.transform.position=mousePos2D;
+            }
+        }*/
 	}
 
 
