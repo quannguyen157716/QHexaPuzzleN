@@ -21,7 +21,7 @@ public class BlockController : MonoBehaviour {
     }
     void Update()
 	{       
-        int layerMask = 1 << 8;
+        /* int layerMask = 1 << 8;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 0,layerMask);
         Debug.DrawRay(transform.position, Vector3.forward*10, Color.green);
         if(hit.collider!=null)
@@ -30,7 +30,7 @@ public class BlockController : MonoBehaviour {
         {
             if (hit.collider != null) 
 		    {
-                gameDriverScript.M_color=render.color;
+                //gameDriverScript.M_color=render.color;
                 Debug.Log(hit.collider.gameObject.name);
                 //transform.localScale=hit.collider.gameObject.transform.localScale;
                 if(hit.collider.gameObject.transform.rotation.z==transform.rotation.z)
@@ -45,7 +45,7 @@ public class BlockController : MonoBehaviour {
             transform.position=origin;
             //else
             //transform.position=origin;
-        }
+        }*/
        
     }
 
@@ -55,22 +55,5 @@ public class BlockController : MonoBehaviour {
         Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance);
         Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
         transform.position = objPosition;
-
-        /* int layerMask = 1 << 8;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 0,layerMask);
-        Debug.DrawRay(transform.position, Vector3.forward*10, Color.green);
-        if(Input.GetMouseButtonUp(0))
-        {
-
-            if (hit.collider != null) 
-		    {
-                Debug.Log(hit.collider.gameObject.name);
-                transform.localScale=hit.collider.gameObject.transform.localScale;
-                
-                //Destroy(hit.collider.gameObject);
-		    }
-            //else
-            //transform.position=origin;
-        }*/
 	}
 }

@@ -10,6 +10,8 @@ public class BlockOverLapping : MonoBehaviour {
 	bool fill=false;//
 	GameObject gameDriver;
 	GameController gameDriverScript;
+	SpriteRenderer r;
+	Color blockColor;
 	// Use this for initialization
 	void Start () {
 		block=GetComponent<SpriteRenderer>();
@@ -21,16 +23,17 @@ public class BlockOverLapping : MonoBehaviour {
 	void Update () {
 		if(!fill)
 		{
-			if(Fit())
+			Fit();
+			/* if(Fit())
 			{
-				Debug.Log("Fit");
+				/* Debug.Log("Fit");
 				if(Drop())
 				{
 					SetColor(gameDriverScript.M_color);
 					Debug.Log("Set color");
 					fill=true;
 				}
-			}
+		}*/
 		}		
 	}
 
@@ -43,16 +46,16 @@ public class BlockOverLapping : MonoBehaviour {
 		return false;
 	}
 
-	bool Fit()
+	void Fit()
 	{
-		int layerMask = 1 << 8;
-		layerMask = ~layerMask;
+		int layerMask = 1 << 9;
+		
 		//Collider2D hit=Physics2D.OverlapPoint(transform.position,layerMask);
 		if(transform.rotation.z==0)
 		{
 			//Calculate 3 points of triangle
-			c=Physics2D.OverlapPoint(new Vector2(transform.position.x+horizontal_dis/2,transform.position.y-vertical_dis/3),layerMask);
-		    b=Physics2D.OverlapPoint(new Vector2(transform.position.x-horizontal_dis/2,transform.position.y-vertical_dis/3),layerMask);
+			c=Physics2D.OverlapPoint(new Vector2(transform.position.x+horizontal_dis/2,transform.position.y-vertical_dis/3),layerMask);//r
+		    b=Physics2D.OverlapPoint(new Vector2(transform.position.x-horizontal_dis/2,transform.position.y-vertical_dis/3),layerMask);//l
 		    a=Physics2D.OverlapPoint(new Vector2(transform.position.x,transform.position.y+(vertical_dis/3)*2),layerMask);
 		}
 		else
@@ -65,15 +68,24 @@ public class BlockOverLapping : MonoBehaviour {
 		
 		if(a && b && c)
 		{
-			//block.color=Color.green;
+			if(Drop())
+			{
+				Debug.Log("Drop");
+				r=a.gameObject.GetComponent<SpriteRenderer>();
+				SetColor(r.color);
+				fill=true;
+				Destroy(a.gameObject);
+			}
+			else
 			SetColor(Color.green);
-			return true;
+			//block.color=Color.green;	
+			//return true;
 		}
 		else
 		{
 			//block.color=new Color(0f, 0f, 0f, 0.3f);
 			SetColor(new Color(0f, 0f, 0f, 0.3f));
-			return false;
+			//return false;
 		}
 	}
 
