@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameDriver
+  - Block
+  - CompoundBlock
+  - BoardBlock
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - 
   - Board
   - Block
-  - Child
+  - 
   - 
   - 
   - 

@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BlockController.cs" />
      <Compile Include="Assets\Scripts\BlockOverLapping.cs" />
+     <Compile Include="Assets\Scripts\BlockOverLapping2.cs" />
      <Compile Include="Assets\Scripts\BoardGenerator.cs" />
      <Compile Include="Assets\Scripts\Drag.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />

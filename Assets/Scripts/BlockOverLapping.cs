@@ -7,33 +7,18 @@ public class BlockOverLapping : MonoBehaviour {
 	public float horizontal_dis;
 	public float vertical_dis;
 	Collider2D a,b,c;
-	bool fill=false;//
-	GameObject gameDriver;
-	GameController gameDriverScript;
+	bool fill=false;
 	SpriteRenderer r;
-	Color blockColor;
-	// Use this for initialization
+	
 	void Start () {
 		block=GetComponent<SpriteRenderer>();
-		gameDriver=GameObject.FindGameObjectWithTag("GameDriver");	
-		gameDriverScript=gameDriver.GetComponent<GameController>();
 	}
 	
-	// Update is called once per frame
+	
 	void Update () {
 		if(!fill)
 		{
 			Fit();
-			/* if(Fit())
-			{
-				/* Debug.Log("Fit");
-				if(Drop())
-				{
-					SetColor(gameDriverScript.M_color);
-					Debug.Log("Set color");
-					fill=true;
-				}
-		}*/
 		}		
 	}
 
@@ -46,6 +31,10 @@ public class BlockOverLapping : MonoBehaviour {
 		return false;
 	}
 
+	bool CompoundBlock()
+	{
+		return true;
+	}
 	void Fit()
 	{
 		int layerMask = 1 << 9;
@@ -70,11 +59,12 @@ public class BlockOverLapping : MonoBehaviour {
 		{
 			if(Drop())
 			{
-				Debug.Log("Drop");
+				//Debug.Log("Drop");
 				r=a.gameObject.GetComponent<SpriteRenderer>();
 				SetColor(r.color);
 				fill=true;
 				Destroy(a.gameObject);
+				//Debug.Log(a.gameObject.name);
 			}
 			else
 			SetColor(Color.green);

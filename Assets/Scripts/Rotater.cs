@@ -11,6 +11,6 @@ public class Rotater : MonoBehaviour {
 		if(!enabled) 
 		return;
 		else
-		transform.Rotate(0,0,60);
+		transform.Rotate(0,0,60, Space.Self);
 	}
 }
