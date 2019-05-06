@@ -9,13 +9,17 @@ public class BlockController : MonoBehaviour {
     GameObject gameDriver;
 	GameController gameDriverScript;
     Vector3 origin;
-    public GameObject board_triangle;
-    SpriteRenderer boardRender;
+    //public GameObject board_triangle;
+    //SpriteRenderer boardRender;
+    bool flip=false;
     void Start()
     {
-        render=GetComponent<SpriteRenderer>();
-        gameDriver=GameObject.FindGameObjectWithTag("GameDriver");	
-		gameDriverScript=gameDriver.GetComponent<GameController>();
+        if(transform.rotation.z==0)
+        flip =true;
+        //Debug.Log("");
+        //render=GetComponent<SpriteRenderer>();
+        //gameDriver=GameObject.FindGameObjectWithTag("GameDriver");	
+		//gameDriverScript=gameDriver.GetComponent<GameController>();
         origin=transform.position;
         //boardRender=board_triangle.GetComponent<SpriteRenderer>();
     }
@@ -55,5 +59,13 @@ public class BlockController : MonoBehaviour {
         Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance);
         Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
         transform.position = objPosition;
+	}
+
+    void OnMouseDown()
+	{
+		if(!enabled) 
+		return;
+		else
+		transform.Rotate(0,0,60, Space.Self);
 	}
 }

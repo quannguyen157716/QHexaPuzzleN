@@ -9,8 +9,11 @@ public class BlockOverLapping : MonoBehaviour {
 	Collider2D a,b,c;
 	bool fill=false;
 	SpriteRenderer r;
-	
+	bool flip=false;
 	void Start () {
+		if(transform.rotation.z==0)
+        flip =true;
+        Debug.Log(flip);
 		block=GetComponent<SpriteRenderer>();
 	}
 	
