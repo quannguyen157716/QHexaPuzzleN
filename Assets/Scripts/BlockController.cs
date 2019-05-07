@@ -18,21 +18,26 @@ public class BlockController : MonoBehaviour {
     }
     void Update()
 	{       
-        /* int layerMask = 1 << 8;
+        int layerMask = 1 << 8;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 0,layerMask);
         Debug.DrawRay(transform.position, Vector3.forward*10, Color.green);
         if(hit.collider!=null)
         Debug.DrawRay(transform.position, Vector3.forward*10, Color.red);
         if(Input.GetMouseButtonUp(0))
         {
-            if (hit.collider != null) 
+            if (hit.collider == null) 
 		    {
-                Debug.Log(hit.collider.gameObject.name);
-                boardRender=hit.collider.gameObject.GetComponent<SpriteRenderer>();
-                boardRender.color=render.color;   
-                Destroy(gameObject);
+                //Debug.Log(hit.collider.gameObject.name);
+                //boardRender=hit.collider.gameObject.GetComponent<SpriteRenderer>();
+                //boardRender.color=render.color;   
+                //Destroy(gameObject);
+                ResetToOrigin();
 		    }
-        }*/
+            else
+            {
+                
+            }
+        }
     }
 
     void OnMouseDrag()
@@ -46,6 +51,11 @@ public class BlockController : MonoBehaviour {
         }
        
 	}
+
+    public void ResetToOrigin()
+        {
+            transform.position=origin;
+        }
 
    /*  void OnMouseDown()
 	{

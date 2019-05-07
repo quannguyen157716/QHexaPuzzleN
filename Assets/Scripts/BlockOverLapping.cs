@@ -8,7 +8,8 @@ public class BlockOverLapping : MonoBehaviour {
 	public float vertical_dis;
 	Collider2D a,b,c;
 	bool fill=false;
-	SpriteRenderer r;
+	SpriteRenderer blockRender;
+	BlockController bController;
 	void Start () {
 		block=GetComponent<SpriteRenderer>();
 	}
@@ -58,23 +59,20 @@ public class BlockOverLapping : MonoBehaviour {
 		{
 			if(Drop())
 			{
-				//Debug.Log("Drop");
-				r=a.gameObject.GetComponent<SpriteRenderer>();
-				SetColor(r.color);
+				Debug.Log("Drop");
+				blockRender=a.gameObject.GetComponent<SpriteRenderer>();
+				SetColor(blockRender.color);
 				fill=true;
 				Destroy(a.gameObject);
 				Debug.Log(a.gameObject.name);
 			}
 			else
 			SetColor(Color.green);
-	
-			//return true;
 		}
 		else
 		{
-			//block.color=new Color(0f, 0f, 0f, 0.3f);
+
 			SetColor(new Color(0f, 0f, 0f, 0.3f));
-			//return false;
 		}
 	}
 
