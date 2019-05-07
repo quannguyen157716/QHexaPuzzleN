@@ -3,25 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BlockController : MonoBehaviour {
-    //public GameDriver gameDriver;
+
 	float distance = 1;//distance from camera to object
     SpriteRenderer render;
     GameObject gameDriver;
 	GameController gameDriverScript;
     Vector3 origin;
-    //public GameObject board_triangle;
-    //SpriteRenderer boardRender;
-    bool flip=false;
+    SpriteRenderer boardRender;
+    public bool movable=true;
     void Start()
     {
-        if(transform.rotation.z==0)
-        flip =true;
-        //Debug.Log("");
-        //render=GetComponent<SpriteRenderer>();
-        //gameDriver=GameObject.FindGameObjectWithTag("GameDriver");	
-		//gameDriverScript=gameDriver.GetComponent<GameController>();
+        render=GetComponent<SpriteRenderer>();
         origin=transform.position;
-        //boardRender=board_triangle.GetComponent<SpriteRenderer>();
     }
     void Update()
 	{       
@@ -34,38 +27,31 @@ public class BlockController : MonoBehaviour {
         {
             if (hit.collider != null) 
 		    {
-                //gameDriverScript.M_color=render.color;
                 Debug.Log(hit.collider.gameObject.name);
-                //transform.localScale=hit.collider.gameObject.transform.localScale;
-                if(hit.collider.gameObject.transform.rotation.z==transform.rotation.z)
-                {
-                    
-                    //Destroy(this.gameObject);
-                }
-                else
-                transform.position=origin;
+                boardRender=hit.collider.gameObject.GetComponent<SpriteRenderer>();
+                boardRender.color=render.color;   
+                Destroy(gameObject);
 		    }
-            else
-            transform.position=origin;
-            //else
-            //transform.position=origin;
         }*/
-       
     }
 
     void OnMouseDrag()
 	{
         //Debug.Log("Drag");
-        Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance);
-        Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
-        transform.position = objPosition;
+        if(movable)
+        {
+            Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance);
+            Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
+            transform.position = objPosition;
+        }
+       
 	}
 
-    void OnMouseDown()
+   /*  void OnMouseDown()
 	{
 		if(!enabled) 
 		return;
 		else
 		transform.Rotate(0,0,60, Space.Self);
-	}
+	}*/
 }

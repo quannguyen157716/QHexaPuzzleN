@@ -9,11 +9,7 @@ public class BlockOverLapping : MonoBehaviour {
 	Collider2D a,b,c;
 	bool fill=false;
 	SpriteRenderer r;
-	bool flip=false;
 	void Start () {
-		if(transform.rotation.z==0)
-        flip =true;
-        Debug.Log(flip);
 		block=GetComponent<SpriteRenderer>();
 	}
 	
@@ -67,11 +63,11 @@ public class BlockOverLapping : MonoBehaviour {
 				SetColor(r.color);
 				fill=true;
 				Destroy(a.gameObject);
-				//Debug.Log(a.gameObject.name);
+				Debug.Log(a.gameObject.name);
 			}
 			else
 			SetColor(Color.green);
-			//block.color=Color.green;	
+	
 			//return true;
 		}
 		else

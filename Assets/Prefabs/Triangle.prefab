@@ -80,8 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292573292a9f6d6418a151963af53bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  board_triangle: {fileID: 1191757614723050, guid: 59ed725037b50e34084497f0845e8a03,
-    type: 2}
+  movable: 1
 --- !u!212 &212249338187594060
 SpriteRenderer:
   m_ObjectHideFlags: 1
