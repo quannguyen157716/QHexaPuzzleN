@@ -9,13 +9,17 @@ public class GameController : MonoBehaviour {
 	bool fit=false;
 	public GameObject[] block =new GameObject[8];
 	public GameObject[] respawnPoint =new GameObject[3];
+	GameObject b;
 	//Vector2 pos1;
 	// Use this for initialization
 	void Start () {
 		//pos1=new Vector2(-0.03f,-3.2f);
-		Instantiate(block[0], respawnPoint[0].transform.position, Quaternion.identity);
-		Instantiate(block[1], respawnPoint[1].transform.position, Quaternion.identity);
-		Instantiate(block[0], respawnPoint[2].transform.position, Quaternion.identity);
+		b=Instantiate(block[0], respawnPoint[0].transform.position, Quaternion.identity);
+		b.transform.SetParent(respawnPoint[0].transform);
+		b=Instantiate(block[1], respawnPoint[1].transform.position, Quaternion.identity);
+		b.transform.SetParent(respawnPoint[1].transform);
+		b=Instantiate(block[0], respawnPoint[2].transform.position, Quaternion.identity);
+		b.transform.SetParent(respawnPoint[2].transform);
 	}
 	
 	// Update is called once per frame

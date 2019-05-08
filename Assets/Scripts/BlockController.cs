@@ -6,14 +6,12 @@ public class BlockController : MonoBehaviour {
 
 	float distance = 1;//distance from camera to object
     SpriteRenderer render;
-    GameObject gameDriver;
-	GameController gameDriverScript;
+    //GameObject gameDriver;
+	//GameController gameDriverScript;
     Vector3 origin;
-    SpriteRenderer boardRender;
     public bool movable=true;
     void Start()
     {
-        render=GetComponent<SpriteRenderer>();
         origin=transform.position;
     }
     void Update()
@@ -26,17 +24,21 @@ public class BlockController : MonoBehaviour {
         if(Input.GetMouseButtonUp(0))
         {
             if (hit.collider == null) 
-		    {
-                //Debug.Log(hit.collider.gameObject.name);
-                //boardRender=hit.collider.gameObject.GetComponent<SpriteRenderer>();
-                //boardRender.color=render.color;   
-                //Destroy(gameObject);
+		    {     
                 ResetToOrigin();
 		    }
             else
             {
-                
+                render=hit.collider.gameObject.GetComponent<SpriteRenderer>();
+                if(render.color !=Color.green)
+                ResetToOrigin();
             }
+        }
+
+        if(gameObject.tag=="CompoundBlock")
+        {
+            if(gameObject.transform.childCount==0)
+            Destroy(gameObject);
         }
     }
 
@@ -57,9 +59,9 @@ public class BlockController : MonoBehaviour {
             transform.position=origin;
         }
 
-   /*  void OnMouseDown()
+   /* void OnMouseDown()
 	{
-		if(!enabled) 
+		if(transform.position==origin) 
 		return;
 		else
 		transform.Rotate(0,0,60, Space.Self);

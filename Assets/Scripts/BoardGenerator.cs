@@ -12,7 +12,7 @@ public class BoardGenerator : MonoBehaviour {
 	public int numberOfBlockFirstRow;
 	// Use this for initialization
 	Vector3 ini_Pos;
-	
+	GameObject iblock;
 	void Start () 
 	{
 		ini_Pos=new Vector3(x,y);
@@ -35,7 +35,8 @@ public class BoardGenerator : MonoBehaviour {
      		for(int j = 1; j <= num_block; j++)
 			{
 			    pos.x+=horizontal_dis;
-			    Instantiate(block, pos, Quaternion.Euler(0, 0, 60));
+			    iblock=Instantiate(block, pos, Quaternion.Euler(0, 0, 60));
+				iblock.transform.SetParent(transform);
 			}
 			num_block++;
 			pos.y+=vertical_dis;
@@ -53,7 +54,8 @@ public class BoardGenerator : MonoBehaviour {
 			for(int j= 1; j<= num_block; j++)
 			{
 				pos.x+=horizontal_dis;
-				Instantiate(block, pos, Quaternion.Euler(0, 0, 60));
+				iblock=Instantiate(block, pos, Quaternion.Euler(0, 0, 60));
+				iblock.transform.SetParent(transform);
 			}
 			num_block--;
 			pos.y+=vertical_dis;
@@ -73,7 +75,8 @@ public class BoardGenerator : MonoBehaviour {
 			for(int j= 1; j<= num_block; j++)
 			{
 				pos.x+=horizontal_dis;
-				Instantiate(block, pos, Quaternion.identity);
+				iblock=Instantiate(block, pos, Quaternion.identity);
+				iblock.transform.SetParent(transform);
 			}
 			num_block++;
 			pos.y+=vertical_dis;
@@ -88,7 +91,8 @@ public class BoardGenerator : MonoBehaviour {
 			for(int j= 1; j<= num_block; j++)
 			{
 				pos.x+=horizontal_dis;
-				Instantiate(block, pos, Quaternion.identity);
+				iblock=Instantiate(block, pos, Quaternion.identity);
+				iblock.transform.SetParent(transform);
 			}
 			num_block--;
 			pos.y+=vertical_dis;
