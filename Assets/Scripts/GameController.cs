@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 	Color m_color; //color to change the board
-	bool rotating=true; //determine when a block can rotate
-	bool drop=false;
-	bool fit=false;
 	public GameObject[] block =new GameObject[8];
 	public GameObject[] respawnPoint =new GameObject[3];
 	GameObject b;
@@ -18,7 +15,7 @@ public class GameController : MonoBehaviour {
 		b.transform.SetParent(respawnPoint[0].transform);
 		b=Instantiate(block[1], respawnPoint[1].transform.position, Quaternion.identity);
 		b.transform.SetParent(respawnPoint[1].transform);
-		b=Instantiate(block[0], respawnPoint[2].transform.position, Quaternion.identity);
+		b=Instantiate(block[2], respawnPoint[2].transform.position, Quaternion.identity);
 		b.transform.SetParent(respawnPoint[2].transform);
 	}
 	
@@ -52,21 +49,6 @@ public class GameController : MonoBehaviour {
 		set{m_color=value;}
 	}
 
-	public bool Rotating
-	{
-		get{return rotating;}
-		set{rotating=value;}
-	}
 
-	public bool Drop
-	{
-		get{return drop;}
-		set{drop=value;}
-	}
 
-	public bool Fit
-	{
-		get{return fit;}
-		set{fit=value;}
-	}
 }

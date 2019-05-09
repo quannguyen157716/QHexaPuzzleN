@@ -30,10 +30,6 @@ public class BlockOverLapping : MonoBehaviour {
 		return false;
 	}
 
-	bool CompoundBlock()
-	{
-		return true;
-	}
 	void Fit()
 	{
 		int layerMask = 1 << 9;
