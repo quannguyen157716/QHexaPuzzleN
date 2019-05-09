@@ -14,7 +14,6 @@ public class BlockOverLapping : MonoBehaviour {
 		block=GetComponent<SpriteRenderer>();
 	}
 	
-	
 	void Update () {
 		if(!fill)
 		{

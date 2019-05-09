@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Respawn : MonoBehaviour {
-
+	GameObject block;
 	// Use this for initialization
 	
 	// Update is called once per frame
-	
 
-	void OnCollisionEnter2D(Collision2D col)
+	void Update()
 	{
-		Debug.Log("Col");
+
 	}
 
-
+	void ChildEnter()
+	{
+		
+	}
 }

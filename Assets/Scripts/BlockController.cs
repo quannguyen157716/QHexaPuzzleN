@@ -59,7 +59,7 @@ public class BlockController : MonoBehaviour {
             transform.position=origin;
         }
 
-   /* void OnMouseDown()
+    /* void OnMouseDown()
 	{
 		if(transform.position==origin) 
 		return;

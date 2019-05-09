@@ -25,6 +25,11 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if(respawnPoint[0].transform.childCount==0)
+		{
+			b=Instantiate(block[0], respawnPoint[0].transform.position, Quaternion.identity);
+			b.transform.SetParent(respawnPoint[0].transform);
+		}
 		/*int layerMask=1 << 9;
 		if (Input.GetMouseButton(0)) 
 		 {
