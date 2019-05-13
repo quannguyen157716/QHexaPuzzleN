@@ -27,6 +27,12 @@ public class GameController : MonoBehaviour {
 			b=Instantiate(block[0], respawnPoint[0].transform.position, Quaternion.identity);
 			b.transform.SetParent(respawnPoint[0].transform);
 		}
+
+		if(respawnPoint[1].transform.childCount==0)
+		{
+			b=Instantiate(block[1], respawnPoint[1].transform.position, Quaternion.identity);
+			b.transform.SetParent(respawnPoint[1].transform);
+		}
 		/*int layerMask=1 << 9;
 		if (Input.GetMouseButton(0)) 
 		 {
