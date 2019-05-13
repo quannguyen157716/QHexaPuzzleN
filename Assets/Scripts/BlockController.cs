@@ -17,6 +17,7 @@ public class BlockController : MonoBehaviour {
     void Update()
 	{       
         int layerMask = 1 << 8;
+        
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 0,layerMask);
         Debug.DrawRay(transform.position, Vector3.forward*10, Color.green);
         if(hit.collider!=null)

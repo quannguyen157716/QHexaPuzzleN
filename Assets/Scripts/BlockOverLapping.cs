@@ -54,12 +54,12 @@ public class BlockOverLapping : MonoBehaviour {
 		{
 			if(Drop())
 			{
-				Debug.Log("Drop");
+				//Debug.Log("Drop");
 				blockRender=a.gameObject.GetComponent<SpriteRenderer>();
 				SetColor(blockRender.color);
 				fill=true;
 				Destroy(a.gameObject);
-				Debug.Log(a.gameObject.name);
+				//Debug.Log(a.gameObject.name);
 			}
 			else
 			SetColor(Color.green);
