@@ -54,10 +54,6 @@
      <Compile Include="Assets\Scripts\BlockController.cs" />
      <Compile Include="Assets\Scripts\BlockOverLapping.cs" />
      <Compile Include="Assets\Scripts\BoardGenerator.cs" />
-     <Compile Include="Assets\Scripts\FunScripts\BlockOverLapping2.cs" />
-     <Compile Include="Assets\Scripts\FunScripts\Drag.cs" />
-     <Compile Include="Assets\Scripts\FunScripts\Rotater.cs" />
-     <Compile Include="Assets\Scripts\FunScripts\Slot.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Respawn.cs" />
  <Reference Include="UnityEngine.CoreModule">
