@@ -26,7 +26,7 @@ public class BlockController : MonoBehaviour {
         {
             if (hit.collider == null) 
 		    {     
-                ResetToOrigin();
+               ResetToOrigin();
 		    }
             else
             {

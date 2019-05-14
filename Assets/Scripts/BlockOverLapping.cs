@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BlockOverLapping : MonoBehaviour {
-	SpriteRenderer block;
+	
 	public float horizontal_dis;
 	public float vertical_dis;
+	public Color boardColor;
 	Collider2D a,b,c;
 	bool fill=false;
 	SpriteRenderer blockRender;
-	BlockController bController;
+	SpriteRenderer block;
+	int status;
 	void Start () {
+		if(transform.rotation.z ==0)
+		status=1;
 		block=GetComponent<SpriteRenderer>();
+		block.color=boardColor;
 	}
 	
 	void Update () {
 		if(!fill)
 		{
 			Fit();
-		}		
+		}
 	}
 
 	bool Drop()

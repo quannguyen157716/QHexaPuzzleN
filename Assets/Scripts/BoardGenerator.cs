@@ -10,9 +10,10 @@ public class BoardGenerator : MonoBehaviour {
 	public float vertical_dis;
 	public int rows;
 	public int numberOfBlockFirstRow;
-	// Use this for initialization
 	Vector3 ini_Pos;
 	GameObject iblock;
+	int rotation;
+	int[,] status=new int[6,11];
 	void Start () 
 	{
 		ini_Pos=new Vector3(x,y);
@@ -39,13 +40,10 @@ public class BoardGenerator : MonoBehaviour {
 				iblock.transform.SetParent(transform);
 			}
 			num_block++;
-			pos.y+=vertical_dis;
+			pos.y-=vertical_dis;
 			pos.x=ini.x-horizontal_dis/2;
    		}
 
-		//Reverse
-		pos.x+=horizontal_dis;
-		num_block-=2;		
 		for(int i =0 ;i < rows; i++)
 		{
 			ini.x=pos.x;
@@ -58,15 +56,15 @@ public class BoardGenerator : MonoBehaviour {
 				iblock.transform.SetParent(transform);
 			}
 			num_block--;
-			pos.y+=vertical_dis;
+			pos.y-=vertical_dis;
 			pos.x=ini.x+horizontal_dis/2;
 		}
 		
 		//Print the rest of board
 		pos.x=ini_Pos.x;
 		pos.y=ini_Pos.y;
-		num_block=numberOfBlockFirstRow-1;
-		pos.x+=horizontal_dis/2;
+		num_block=numberOfBlockFirstRow+1;
+		pos.x-=horizontal_dis/2;
 		pos.y-=vertical_dis/3;
 		for(int i =0 ;i < rows; i++)
 		{
@@ -79,11 +77,13 @@ public class BoardGenerator : MonoBehaviour {
 				iblock.transform.SetParent(transform);
 			}
 			num_block++;
-			pos.y+=vertical_dis;
+			pos.y-=vertical_dis;
 			pos.x=ini.x-horizontal_dis/2;
 		}
 		
 		//Reverse
+		num_block-=2;
+		pos.x+=horizontal_dis;
 		for(int i =0 ;i < rows; i++)
 		{
 			ini.x=pos.x;
@@ -95,7 +95,7 @@ public class BoardGenerator : MonoBehaviour {
 				iblock.transform.SetParent(transform);
 			}
 			num_block--;
-			pos.y+=vertical_dis;
+			pos.y-=vertical_dis;
 			pos.x=ini.x+horizontal_dis/2;
 		}
 	}
