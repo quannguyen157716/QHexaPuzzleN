@@ -67,11 +67,13 @@ public class BlockOverLapping : MonoBehaviour {
 				//Debug.Log(a.gameObject.name);
 			}
 			else
-			SetColor(Color.green);
+			{
+				SetColor(Color.green);
+			}
+			
 		}
 		else
 		{
-
 			SetColor(new Color(0f, 0f, 0f, 0.3f));
 		}
 	}

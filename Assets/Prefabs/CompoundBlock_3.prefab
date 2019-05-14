@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4366050496428016}
   - component: {fileID: 212755928519334900}
-  - component: {fileID: 60665561973986098}
+  - component: {fileID: 60068663749550652}
   m_Layer: 9
   m_Name: Triangle (1)
   m_TagString: Block
@@ -83,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1192138141075826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.398, y: 2.099, z: -2}
+  m_LocalPosition: {x: 0.447, y: 1.699, z: -2}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 4074742901496016}
@@ -119,7 +119,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!60 &60665561973986098
+--- !u!60 &60068663749550652
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -143,9 +143,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0013894694, y: 1.2200308}
-      - {x: -1.0790815, y: -0.6476764}
-      - {x: 1.0545286, y: -0.6517511}
+    - - {x: 0.22685656, y: 0.8213542}
+      - {x: 1.0849149, y: 2.2996173}
+      - {x: -1.0520475, y: 2.2897906}
+      - {x: -0.22427061, y: 0.8213123}
+      - {x: -1.0675625, y: -0.66841567}
+      - {x: 1.0866452, y: -0.6724111}
 --- !u!60 &60679991144408628
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -170,7 +173,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.002975634, y: 1.2200308}
+    - - {x: 0.22685656, y: 0.8213542}
+      - {x: 1.0849149, y: 2.2996173}
+      - {x: -1.0520475, y: 2.2897906}
+      - {x: -0.22427061, y: 0.8213123}
       - {x: -1.0675625, y: -0.66841567}
       - {x: 1.0866452, y: -0.6724111}
 --- !u!114 &114842761207805654
