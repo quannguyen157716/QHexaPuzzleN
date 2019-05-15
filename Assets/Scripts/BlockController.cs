@@ -60,11 +60,11 @@ public class BlockController : MonoBehaviour {
             transform.position=origin;
         }
 
-    /* void OnMouseDown()
+    void OnMouseDown()
 	{
-		if(transform.position==origin) 
-		return;
-		else
-		transform.Rotate(0,0,60, Space.Self);
-	}*/
+		//if(transform.position==origin) 
+		//return;
+		//else
+		transform.Rotate(0,0,60, Space.World);
+	}
 }
