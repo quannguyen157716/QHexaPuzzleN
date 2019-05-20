@@ -11,7 +11,6 @@ public class BlockOverLapping2 : MonoBehaviour {
 	SpriteRenderer blockRender;
 	SpriteRenderer block;
 	int status;
-	Collider2D[] point=new Collider2D[3];
 	//Collider2D hit;
 	// Use this for initialization
 	void Start () {
