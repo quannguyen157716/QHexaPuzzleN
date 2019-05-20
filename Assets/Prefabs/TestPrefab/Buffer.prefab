@@ -9,50 +9,48 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1191757614723050}
+  m_RootGameObject: {fileID: 1737136761458502}
   m_IsPrefabParent: 1
---- !u!1 &1191757614723050
+--- !u!1 &1737136761458502
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4301873884166098}
-  - component: {fileID: 212851506803368802}
-  - component: {fileID: 114928071372471082}
-  - component: {fileID: 114142223238378260}
-  - component: {fileID: 60636200307617160}
-  m_Layer: 8
-  m_Name: Board_Triangle
-  m_TagString: BoardBlock
+  - component: {fileID: 4357229753733052}
+  - component: {fileID: 212027727268839118}
+  - component: {fileID: 60812506794755260}
+  m_Layer: 0
+  m_Name: Buffer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4301873884166098
+--- !u!4 &4357229753733052
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191757614723050}
+  m_GameObject: {fileID: 1737136761458502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.213, y: -1.962, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.92, y: -0, z: 0.5}
+  m_LocalScale: {x: 5.327137, y: 5.3074656, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60636200307617160
+--- !u!60 &60812506794755260
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191757614723050}
+  m_GameObject: {fileID: 1737136761458502}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -68,43 +66,18 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0.5}
+      - {x: -0.43301272, y: 0.24999999}
       - {x: -0.4330127, y: -0.25000003}
+      - {x: 0.00000004371139, y: -0.5}
       - {x: 0.43301272, y: -0.24999996}
---- !u!114 &114142223238378260
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191757614723050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c05f13880e74151b6d3f241056c856, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal_dis: 0.6
-  vertical_dis: 0.48
-  boardColor: {r: 0, g: 0, b: 0, a: 0.3019608}
---- !u!114 &114928071372471082
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191757614723050}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a89e491f85affb4da5e39355a8e4895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal_dis: 0.9
-  vertical_dis: 0.78
-  boardColor: {r: 0, g: 0, b: 0, a: 0.3019608}
---- !u!212 &212851506803368802
+      - {x: 0.43301272, y: 0.24999996}
+--- !u!212 &212027727268839118
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191757614723050}
-  m_Enabled: 1
+  m_GameObject: {fileID: 1737136761458502}
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -112,7 +85,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,11 +102,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1784066399
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 320e4a44eb032fb4db56df1599e4febc, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.3019608}
+  m_Sprite: {fileID: 21300000, guid: 226ffc34935f9944bb8807214226db5a, type: 3}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
