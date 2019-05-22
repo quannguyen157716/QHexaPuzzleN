@@ -10,7 +10,8 @@ public class BlockOverLapping2 : MonoBehaviour {
 	bool fill=false;
 	SpriteRenderer blockRender;
 	SpriteRenderer block;
-	int status;
+	[HideInInspector]
+	public int status;
 	//Collider2D hit;
 	// Use this for initialization
 	void Start () {

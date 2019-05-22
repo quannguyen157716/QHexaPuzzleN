@@ -19,17 +19,18 @@ public class BlockController : MonoBehaviour {
         int layerMask = 1 << 8;
         
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 0,layerMask);
-        Debug.DrawRay(transform.position, Vector3.forward*10, Color.green);
-        if(hit.collider!=null)
-        Debug.DrawRay(transform.position, Vector3.forward*10, Color.red);
+        //Debug.DrawRay(transform.position, Vector3.forward*10, Color.green);
+        //if(hit.collider!=null)
+        //Debug.DrawRay(transform.position, Vector3.forward*10, Color.red);
         if(Input.GetMouseButtonUp(0))
         {
             if (hit.collider == null) 
 		    {     
                ResetToOrigin();
 		    }
-            else
+            else 
             {
+                
                 render=hit.collider.gameObject.GetComponent<SpriteRenderer>();
                 if(render.color !=Color.green)
                 ResetToOrigin();
