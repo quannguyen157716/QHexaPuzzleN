@@ -81,9 +81,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c05f13880e74151b6d3f241056c856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal_dis: 0.6
-  vertical_dis: 0.48
+  board: {fileID: 0}
+  horizontal_dis: 0.9
+  vertical_dis: 0.78
   boardColor: {r: 0, g: 0, b: 0, a: 0.3019608}
+  status: 0
 --- !u!114 &114928071372471082
 MonoBehaviour:
   m_ObjectHideFlags: 1

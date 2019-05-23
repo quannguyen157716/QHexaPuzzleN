@@ -13,7 +13,7 @@ public class BoardGenerator : MonoBehaviour {
 	Vector3 ini_Pos;
 	GameObject iblock;
 	int rotation;
-	int[,] status=new int[6,11];
+	//int[,] status=new int[6,11];
 	GameObject[,] hexa=new GameObject[6,11];
 	void Start () 
 	{
@@ -28,10 +28,11 @@ public class BoardGenerator : MonoBehaviour {
 		pos.y=ini_Pos.y;
 		Vector3 ini=new Vector3(); // hold position of first block of a row
 		int num_block=numberOfBlockFirstRow;
-
+		int b=3;
         //Print the first half of board
 		for(int i = 0; i < rows; i++)
    		{
+			int previousB=b;
 			ini.x=pos.x;
 			ini.y=pos.y;
      		for(int j = 1; j <= num_block; j++)
@@ -39,23 +40,32 @@ public class BoardGenerator : MonoBehaviour {
 			    pos.x+=horizontal_dis;
 			    iblock=Instantiate(block, pos, Quaternion.Euler(0, 0, 60));
 				iblock.transform.SetParent(transform);
+				hexa[i,b]=iblock;
+				b+=2;
 			}
+			b=previousB;
+			b--;
 			num_block++;
 			pos.y-=vertical_dis;
 			pos.x=ini.x-horizontal_dis/2;
    		}
 
+		b=0;
 		for(int i =0 ;i < rows; i++)
 		{
+			int previousB=b;
 			ini.x=pos.x;
-			ini.y=pos.y;
-			
+			ini.y=pos.y;	
 			for(int j= 1; j<= num_block; j++)
 			{
 				pos.x+=horizontal_dis;
 				iblock=Instantiate(block, pos, Quaternion.Euler(0, 0, 60));
 				iblock.transform.SetParent(transform);
+				hexa[i+3,b]=iblock;
+				b+=2;
 			}
+			b=previousB;
+			b++;
 			num_block--;
 			pos.y-=vertical_dis;
 			pos.x=ini.x+horizontal_dis/2;
@@ -112,4 +122,6 @@ public class BoardGenerator : MonoBehaviour {
 			pos.x=ini.x+horizontal_dis/2;
 		}
 	}
+
 }
+

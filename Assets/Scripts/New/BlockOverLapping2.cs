@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BlockOverLapping2 : MonoBehaviour {
 
+	GameObject board;
+	BoardGenerator boardScript;
 	public float horizontal_dis;
 	public float vertical_dis;
 	public Color boardColor;
@@ -19,6 +21,9 @@ public class BlockOverLapping2 : MonoBehaviour {
 		status=1;
 		block=GetComponent<SpriteRenderer>();
 		boardColor=block.color;
+
+		board=GameObject.FindGameObjectWithTag("Board");
+		boardScript=board.GetComponent<BoardGenerator>();
 	}
 	
 	// Update is called once per frame
@@ -41,8 +46,10 @@ public class BlockOverLapping2 : MonoBehaviour {
 	{
 		int layerMask = 1 << 9;
 		
-	    Collider2D hit=Physics2D.OverlapPoint(transform.position,layerMask);
 
+
+	    Collider2D hit=Physics2D.OverlapPoint(transform.position,layerMask);
+		
 		if(hit)
 		{
 			Debug.Log(hit.gameObject.transform.eulerAngles.z);
@@ -85,6 +92,7 @@ public class BlockOverLapping2 : MonoBehaviour {
 		int layerMask = 1 << 9;
 		
 	    Collider2D hit=Physics2D.OverlapPoint(transform.position,layerMask);
+
 		if(hit)
 		{
 			if(transform.rotation.z!=0)
