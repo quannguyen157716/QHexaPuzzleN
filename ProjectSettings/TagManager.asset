@@ -9,6 +9,7 @@ TagManager:
   - CompoundBlock
   - BoardBlock
   - Buffer
+  - Board
   layers:
   - Default
   - TransparentFX

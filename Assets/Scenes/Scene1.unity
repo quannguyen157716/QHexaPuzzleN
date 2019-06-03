@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 1757915275}
   m_Layer: 0
   m_Name: Board
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -709,6 +709,21 @@ Prefab:
     - target: {fileID: 1737136761458502, guid: 6bb3885e1ea484c3897540b3c32e4406, type: 2}
       propertyPath: m_TagString
       value: BoardBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 212027727268839118, guid: 6bb3885e1ea484c3897540b3c32e4406,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212027727268839118, guid: 6bb3885e1ea484c3897540b3c32e4406,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.772
+      objectReference: {fileID: 0}
+    - target: {fileID: 212027727268839118, guid: 6bb3885e1ea484c3897540b3c32e4406,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6bb3885e1ea484c3897540b3c32e4406, type: 2}

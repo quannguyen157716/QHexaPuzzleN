@@ -12,13 +12,25 @@ public class BoardGenerator : MonoBehaviour {
 	public int numberOfBlockFirstRow;
 	Vector3 ini_Pos;
 	GameObject iblock;
-	int rotation;
+	//int rotation;
 	//int[,] status=new int[6,11];
 	GameObject[,] hexa=new GameObject[6,11];
+	BlockOverLapping2[,] hex=new BlockOverLapping2[6,11];
+
 	void Start () 
 	{
 		ini_Pos=new Vector3(x,y);
 		CreateBoard();
+		//Destroy(hexa[0,2]);
+		//Debug.Log(hex[0,2].fill);
+	}
+	
+	void Update()
+	{
+		//if(Input.GetMouseButtonUp(0))
+		//{
+			CheckHexa();
+		//}
 	}
 	
 	void CreateBoard()//Attempt #1
@@ -41,6 +53,7 @@ public class BoardGenerator : MonoBehaviour {
 			    iblock=Instantiate(block, pos, Quaternion.Euler(0, 0, 60));
 				iblock.transform.SetParent(transform);
 				hexa[i,b]=iblock;
+				hex[i,b]=iblock.GetComponent<BlockOverLapping2>();
 				b+=2;
 			}
 			b=previousB;
@@ -62,6 +75,7 @@ public class BoardGenerator : MonoBehaviour {
 				iblock=Instantiate(block, pos, Quaternion.Euler(0, 0, 60));
 				iblock.transform.SetParent(transform);
 				hexa[i+3,b]=iblock;
+				hex[i+3,b]=iblock.GetComponent<BlockOverLapping2>();
 				b+=2;
 			}
 			b=previousB;
@@ -89,6 +103,7 @@ public class BoardGenerator : MonoBehaviour {
 				iblock=Instantiate(block, pos, Quaternion.identity);
 				iblock.transform.SetParent(transform);
 				hexa[i,c]=iblock;
+				hex[i,c]=iblock.GetComponent<BlockOverLapping2>();
 				c+=2;
 			}
 			c=previousC;
@@ -113,6 +128,7 @@ public class BoardGenerator : MonoBehaviour {
 				iblock=Instantiate(block, pos, Quaternion.identity);
 				iblock.transform.SetParent(transform);
 				hexa[i+3,c]=iblock;
+				hex[i+3,c]=iblock.GetComponent<BlockOverLapping2>();
 				c+=2;
 			}
 			c=previousC;
@@ -122,6 +138,69 @@ public class BoardGenerator : MonoBehaviour {
 			pos.x=ini.x+horizontal_dis/2;
 		}
 	}
+
+	void CheckHexa()
+	{
+		int a=2;
+		int previousA;
+		int number_block=numberOfBlockFirstRow;
+		for(int i=0; i<rows; i++)
+		{
+			previousA=a;
+			for(int j=1;j<=number_block; j++)
+			{
+				if(hex[i,a].fill)
+				{
+					if(hex[i,a].boardColor.color==hex[i,a+1].boardColor.color && hex[i,a+1].boardColor.color ==hex[i,a+2].boardColor.color)
+					{
+						if(hex[i+1,a].boardColor.color==hex[i+1,a+1].boardColor.color && hex[i+1,a+1].boardColor.color==hex[i+1,a+2].boardColor.color)
+						{
+							hex[i,a].Empty();
+							hex[i,a+1].Empty();
+							hex[i,a+2].Empty();
+							hex[i+1,a].Empty();
+							hex[i+1,a+1].Empty();
+							hex[i+1,a+2].Empty();
+						}
+					}	
+				}
+				a+=2;
+			}
+			a=previousA;
+			a--;
+			number_block++;
+		}
+		//Debug.Log(number_block);
+		a=1;
+		number_block-=2;
+		for(int i=3; i<rows+2; i++)
+		{
+			previousA=a;
+			for(int j=1; j<=number_block; j++)
+			{
+				if(hex[i,a].fill)
+				{
+					if(hex[i,a].boardColor.color==hex[i,a+1].boardColor.color && hex[i,a+1].boardColor.color ==hex[i,a+2].boardColor.color)
+					{
+						if(hex[i+1,a].boardColor.color==hex[i+1,a+1].boardColor.color && hex[i+1,a+1].boardColor.color==hex[i+1,a+2].boardColor.color)
+						{
+							hex[i,a].Empty();
+							hex[i,a+1].Empty();
+							hex[i,a+2].Empty();
+							hex[i+1,a].Empty();
+							hex[i+1,a+1].Empty();
+							hex[i+1,a+2].Empty();
+						}
+					}	
+				}
+				a+=2;
+			}
+			a=previousA;
+			a++;
+			number_block--;
+		}
+	}
+
 
 }
 

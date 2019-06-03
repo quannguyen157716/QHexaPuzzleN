@@ -3,27 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BlockOverLapping2 : MonoBehaviour {
-
-	GameObject board;
-	BoardGenerator boardScript;
+	//GameObject board;
+	//BoardGenerator boardScript;
 	public float horizontal_dis;
 	public float vertical_dis;
-	public Color boardColor;
-	bool fill=false;
 	SpriteRenderer blockRender;
-	SpriteRenderer block;
+	
 	[HideInInspector]
 	public int status;
-	//Collider2D hit;
+	[HideInInspector]
+	public SpriteRenderer boardColor;
+	[HideInInspector]
+	public bool fill=false;
 	// Use this for initialization
-	void Start () {
+	void Awake()
+	{
 		if(transform.rotation.z ==0)
 		status=1;
-		block=GetComponent<SpriteRenderer>();
-		boardColor=block.color;
+		else
+		status=2;
 
-		board=GameObject.FindGameObjectWithTag("Board");
-		boardScript=board.GetComponent<BoardGenerator>();
+		boardColor=GetComponent<SpriteRenderer>();
+		//board=GameObject.FindGameObjectWithTag("Board");
+		//boardScript=board.GetComponent<BoardGenerator>();
 	}
 	
 	// Update is called once per frame
@@ -108,7 +110,7 @@ public class BlockOverLapping2 : MonoBehaviour {
 							//Debug.Log("r0ColorChange");
 							blockRender=hit.gameObject.GetComponent<SpriteRenderer>();
 							SetColor(blockRender.color);
-							Debug.Log(blockRender.color);
+							//Debug.Log(blockRender.color);
 							fill=true;
 							Destroy(hit.gameObject);
 						}
@@ -127,7 +129,7 @@ public class BlockOverLapping2 : MonoBehaviour {
 							//Debug.Log("r1ColorChange");
 							blockRender=hit.gameObject.GetComponent<SpriteRenderer>();
 							SetColor(blockRender.color);
-							Debug.Log(blockRender.color);
+							//Debug.Log(blockRender.color);
 							fill=true;
 							Destroy(hit.gameObject);
 							//Debug.Log(a.gameObject.name);
@@ -144,6 +146,12 @@ public class BlockOverLapping2 : MonoBehaviour {
 
 	public void SetColor(Color color)
 	{
-		block.color=color;
+		boardColor.color=color;
+	}
+
+	public void Empty()
+	{
+		boardColor.color=new Color(0f, 0f, 0f, 0.3f);
+		fill=false;
 	}
 }
