@@ -6,7 +6,7 @@ public class BoardGenerator : MonoBehaviour {
 	public GameObject block;
 	public float x;
 	public float y;
-	public float horizontal_dis;
+	public float horizontal_dis; 
 	public float vertical_dis;
 	public int rows;
 	public int numberOfBlockFirstRow;

@@ -30,7 +30,7 @@ public class BlockController : MonoBehaviour {
 		    }
             else 
             {
-                
+                      
                 render=hit.collider.gameObject.GetComponent<SpriteRenderer>();
                 if(render.color !=Color.green)
                 ResetToOrigin();

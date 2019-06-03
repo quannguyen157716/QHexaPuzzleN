@@ -44,7 +44,7 @@ public class BlockOverLapping2 : MonoBehaviour {
 		else
 		return false;
 	}
-	void Fit()
+	/*/void Fit()
 	{
 		int layerMask = 1 << 9;
 		
@@ -87,7 +87,7 @@ public class BlockOverLapping2 : MonoBehaviour {
 		{
 			SetColor(new Color(0f, 0f, 0f, 0.3f));
 		}
-	}
+	} */
 	
 	void Fit2()
 	{
