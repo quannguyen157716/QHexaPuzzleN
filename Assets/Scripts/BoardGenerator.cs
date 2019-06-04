@@ -141,6 +141,7 @@ public class BoardGenerator : MonoBehaviour {
 
 	void CheckHexa()
 	{
+		Color c;
 		int a=2;
 		int previousA;
 		int number_block=numberOfBlockFirstRow;
@@ -151,9 +152,10 @@ public class BoardGenerator : MonoBehaviour {
 			{
 				if(hex[i,a].fill)
 				{
-					if(hex[i,a].boardColor.color==hex[i,a+1].boardColor.color && hex[i,a+1].boardColor.color ==hex[i,a+2].boardColor.color)
+					c=hex[i,a].boardColor.color;
+					if(hex[i,a+1].boardColor.color ==c && hex[i,a+2].boardColor.color==c)
 					{
-						if(hex[i+1,a].boardColor.color==hex[i+1,a+1].boardColor.color && hex[i+1,a+1].boardColor.color==hex[i+1,a+2].boardColor.color)
+						if(hex[i+1,a].boardColor.color==c && hex[i+1,a+1].boardColor.color==c && hex[i+1,a+2].boardColor.color==c)					
 						{
 							hex[i,a].Empty();
 							hex[i,a+1].Empty();
@@ -161,6 +163,19 @@ public class BoardGenerator : MonoBehaviour {
 							hex[i+1,a].Empty();
 							hex[i+1,a+1].Empty();
 							hex[i+1,a+2].Empty();
+							if(hex[i,a+3].fill)//check double hexa
+							{
+								if(hex[i,a+3].boardColor.color== c && hex[i,a+4].boardColor.color==c)
+								{
+									if(hex[i+1,a+3].boardColor.color== c && hex[i+1,a+4].boardColor.color==c)
+									{
+										hex[i,a+3].Empty();
+										hex[i,a+4].Empty();
+										hex[i+1,a+3].Empty();
+										hex[i+1,a+4].Empty();
+									}
+								}
+							}
 						}
 					}	
 				}
@@ -170,7 +185,7 @@ public class BoardGenerator : MonoBehaviour {
 			a--;
 			number_block++;
 		}
-		//Debug.Log(number_block);
+		
 		a=1;
 		number_block-=2;
 		for(int i=3; i<rows+2; i++)
@@ -178,11 +193,12 @@ public class BoardGenerator : MonoBehaviour {
 			previousA=a;
 			for(int j=1; j<=number_block; j++)
 			{
-				if(hex[i,a].fill)
+				if(hex[i,a].fill) 
 				{
-					if(hex[i,a].boardColor.color==hex[i,a+1].boardColor.color && hex[i,a+1].boardColor.color ==hex[i,a+2].boardColor.color)
+					c=hex[i,a].boardColor.color;
+					if(hex[i,a+1].boardColor.color ==c && hex[i,a+2].boardColor.color==c)
 					{
-						if(hex[i+1,a].boardColor.color==hex[i+1,a+1].boardColor.color && hex[i+1,a+1].boardColor.color==hex[i+1,a+2].boardColor.color)
+						if(hex[i+1,a].boardColor.color== c && hex[i+1,a+1].boardColor.color ==c && hex[i+1,a+2].boardColor.color==c)
 						{
 							hex[i,a].Empty();
 							hex[i,a+1].Empty();
@@ -190,6 +206,25 @@ public class BoardGenerator : MonoBehaviour {
 							hex[i+1,a].Empty();
 							hex[i+1,a+1].Empty();
 							hex[i+1,a+2].Empty();
+							try //check double hexa
+							{
+								if(hex[i,a+3].fill)
+								{
+									if(hex[i,a+3].boardColor.color==c && hex[i,a+4].boardColor.color==c)
+									{
+										if(hex[i+1,a+3].boardColor.color== c && hex[i+1,a+4].boardColor.color==c)
+										{
+											hex[i,a+3].Empty();
+											hex[i,a+4].Empty();
+											hex[i+1,a+3].Empty();
+											hex[i+1,a+4].Empty();
+										}
+									}
+								}
+							}
+							catch(System.IndexOutOfRangeException)
+							{}
+							
 						}
 					}	
 				}
@@ -201,6 +236,15 @@ public class BoardGenerator : MonoBehaviour {
 		}
 	}
 
+	void CheckTriple()
+	{
+		
+	}
 
+	void CheckDouble()
+	{}
+
+	void CheckSingle()
+	{}
 }
 
