@@ -190,9 +190,10 @@ public class BoardGenerator : MonoBehaviour {
 									}
 								}
 							}
+							catch(System.NullReferenceException)
+							{}
 							catch(System.IndexOutOfRangeException)
-							{return;}
-						
+							{}
 
 							try //check double hexa second case 
 							{
@@ -218,12 +219,19 @@ public class BoardGenerator : MonoBehaviour {
 										}					
 									}
 								}
+							}
+							catch(System.IndexOutOfRangeException)
+							{Debug.Log("Out of bound");}
 
-								if(hex[i+1,a-1].fill && hex[i+1,a-1].boardColor.color==c)
-								{
+							try
+							{
+									if(hex[i+1,a-1].fill && hex[i+1,a-1].boardColor.color==c)
+									{
 									//double hexa left hand side
+									Debug.Log("LHexa");
 									if(hex[i+2,a-1].boardColor.color== c && hex[i+2,a].boardColor.color==c&&hex[i+2,a+1].boardColor.color==c)
 									{
+										Debug.Log("Left hexa");
 										hex[i+1,a-1].Empty();
 										hex[i+2,a-1].Empty();
 										hex[i+2,a].Empty();
@@ -232,9 +240,7 @@ public class BoardGenerator : MonoBehaviour {
 								}
 							}
 							catch(System.IndexOutOfRangeException)
-							{return;}
-						
-
+							{}
 						}
 					}	
 				}
@@ -278,12 +284,70 @@ public class BoardGenerator : MonoBehaviour {
 											hex[i+1,a+3].Empty();
 											hex[i+1,a+4].Empty();
 										}
+										//Check triple
+										if(hex[i+2,a+1].fill && hex[i+2,a+1].boardColor.color==c)
+										{
+											if(hex[i+2,a+2].boardColor.color==c && hex[i+2,a+3].boardColor.color==c)
+											{
+												hex[i+2,a+1].Empty();
+												hex[i+2,a+2].Empty();
+												hex[i+2,a+3].Empty();
+											}
+										}
 									}
 								}
 							}
-							catch(System.IndexOutOfRangeException)
-							{return;}
+							catch(System.NullReferenceException)
+							{Debug.Log("Out of bound");}
 							
+							try //check double hexa second case 
+							{
+								if(hex[i+1,a+3].fill && hex[i+1,a+3].boardColor.color==c)
+								{
+									//double hexa right hand side
+									if(hex[i+2,a+1].boardColor.color== c && hex[i+2,a+3].boardColor.color==c&&hex[i+2,a+2].boardColor.color==c)
+									{
+										hex[i+1,a+3].Empty();	
+										hex[i+2,a+1].Empty();
+										hex[i+2,a+2].Empty();
+										hex[i+2,a+3].Empty();	
+										//Check triple 
+										if(hex[i+1,a-1].fill && hex[i+1,a-1].boardColor.color==c)	
+										{
+											if(hex[i+2,a-1].boardColor.color== c && hex[i+2,a].boardColor.color==c)
+											{
+												Debug.Log("Fuckkkkkk");
+												hex[i+1,a-1].Empty();
+												hex[i+2,a-1].Empty();
+												hex[i+2,a].Empty();
+											}
+										}					
+									}
+								}
+							}
+							catch(System.NullReferenceException)
+							{Debug.Log("Out of bound");}
+
+							try
+							{
+								if(hex[i+1,a-1].fill && hex[i+1,a-1].boardColor.color==c)
+								{
+									//double hexa left hand side
+									Debug.Log("LHexa");
+									if(hex[i+2,a-1].boardColor.color== c && hex[i+2,a].boardColor.color==c&&hex[i+2,a+1].boardColor.color==c)
+									{
+										Debug.Log("Left hexa");
+										hex[i+1,a-1].Empty();
+										hex[i+2,a-1].Empty();
+										hex[i+2,a].Empty();
+										hex[i+2,a+1].Empty();
+									}
+								}
+							}
+							catch(System.NullReferenceException)
+							{}
+							catch(System.IndexOutOfRangeException)
+							{}
 						}
 					}	
 				}
