@@ -241,6 +241,8 @@ public class BoardGenerator : MonoBehaviour {
 							}
 							catch(System.IndexOutOfRangeException)
 							{}
+							catch(System.NullReferenceException)
+							{}
 						}
 					}	
 				}
@@ -299,6 +301,8 @@ public class BoardGenerator : MonoBehaviour {
 							}
 							catch(System.NullReferenceException)
 							{Debug.Log("Out of bound");}
+							catch(System.IndexOutOfRangeException)
+							{}
 							
 							try //check double hexa second case 
 							{
