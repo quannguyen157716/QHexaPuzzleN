@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4499098857166370}
   - component: {fileID: 212843045757563048}
   - component: {fileID: 60599181365246460}
-  - component: {fileID: 114851496306085966}
+  - component: {fileID: 114636468720344488}
   m_Layer: 9
   m_Name: Triangle_T
   m_TagString: Block
@@ -69,7 +69,7 @@ PolygonCollider2D:
     - - {x: 0, y: 0.5}
       - {x: -0.4330127, y: -0.25000003}
       - {x: 0.43301272, y: -0.24999996}
---- !u!114 &114851496306085966
+--- !u!114 &114636468720344488
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -80,7 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 292573292a9f6d6418a151963af53bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movable: 1
 --- !u!212 &212843045757563048
 SpriteRenderer:
   m_ObjectHideFlags: 1

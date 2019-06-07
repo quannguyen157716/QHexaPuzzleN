@@ -331,6 +331,8 @@ public class BoardGenerator : MonoBehaviour {
 							}
 							catch(System.NullReferenceException)
 							{Debug.Log("Out of bound");}
+							catch(System.IndexOutOfRangeException)
+							{}
 
 							try
 							{
