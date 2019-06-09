@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4301873884166098}
   - component: {fileID: 212851506803368802}
-  - component: {fileID: 114928071372471082}
   - component: {fileID: 114142223238378260}
   - component: {fileID: 60636200307617160}
   m_Layer: 8
@@ -83,23 +82,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal_dis: 0.9
   vertical_dis: 0.78
-  status: 0
-  boardColor: {r: 0, g: 0, b: 0, a: 0.3019608}
+  boardColor: {fileID: 0}
   fill: 0
---- !u!114 &114928071372471082
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191757614723050}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a89e491f85affb4da5e39355a8e4895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal_dis: 0.9
-  vertical_dis: 0.78
-  boardColor: {r: 0, g: 0, b: 0, a: 0.3019608}
 --- !u!212 &212851506803368802
 SpriteRenderer:
   m_ObjectHideFlags: 1

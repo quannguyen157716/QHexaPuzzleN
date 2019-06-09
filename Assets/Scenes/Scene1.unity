@@ -623,7 +623,7 @@ Prefab:
         type: 2}
       propertyPath: block.Array.data[0]
       value: 
-      objectReference: {fileID: 1880330660159072, guid: 4477bc75d366447f8a8f6573c37ef67f,
+      objectReference: {fileID: 1387437768623816, guid: 6c2a4820534802149917c53186a5ae57,
         type: 2}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
@@ -645,6 +645,36 @@ Prefab:
       propertyPath: block.Array.data[2]
       value: 
       objectReference: {fileID: 1978570120468922, guid: 561e080e8008c4f40ae7df188f641169,
+        type: 2}
+    - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
+        type: 2}
+      propertyPath: block.Array.data[3]
+      value: 
+      objectReference: {fileID: 1481544912526206, guid: 65a897a7dde554ed69574555e8879f38,
+        type: 2}
+    - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
+        type: 2}
+      propertyPath: block.Array.data[4]
+      value: 
+      objectReference: {fileID: 1138830838767188, guid: fb9ac57d85f88b941bec5fbfbdbe4021,
+        type: 2}
+    - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
+        type: 2}
+      propertyPath: block.Array.data[5]
+      value: 
+      objectReference: {fileID: 1275684285337558, guid: f04ca2ad70d8aab49bdfa678250f9aed,
+        type: 2}
+    - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
+        type: 2}
+      propertyPath: block.Array.data[6]
+      value: 
+      objectReference: {fileID: 1038314264763868, guid: df920f8283142094889bbee123733c81,
+        type: 2}
+    - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
+        type: 2}
+      propertyPath: block.Array.data[7]
+      value: 
+      objectReference: {fileID: 1307215775849612, guid: 929ce8733858d8b45be6cdb412655505,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81aa57d55c160d34d97fab74b27d2180, type: 2}
@@ -679,14 +709,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block:
-  - {fileID: 1880330660159072, guid: 4477bc75d366447f8a8f6573c37ef67f, type: 2}
+  - {fileID: 1387437768623816, guid: 6c2a4820534802149917c53186a5ae57, type: 2}
   - {fileID: 1227730999115598, guid: 3c4cd313393b9412bae2c1fd0f30fc2c, type: 2}
   - {fileID: 1978570120468922, guid: 561e080e8008c4f40ae7df188f641169, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1481544912526206, guid: 65a897a7dde554ed69574555e8879f38, type: 2}
+  - {fileID: 1138830838767188, guid: fb9ac57d85f88b941bec5fbfbdbe4021, type: 2}
+  - {fileID: 1275684285337558, guid: f04ca2ad70d8aab49bdfa678250f9aed, type: 2}
+  - {fileID: 1038314264763868, guid: df920f8283142094889bbee123733c81, type: 2}
+  - {fileID: 1307215775849612, guid: 929ce8733858d8b45be6cdb412655505, type: 2}
   respawnPoint:
   - {fileID: 694924520}
   - {fileID: 509497223}

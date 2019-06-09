@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour {
 		b.transform.SetParent(respawnPoint[0].transform);
 		b=Instantiate(block[1], respawnPoint[1].transform.position, Quaternion.identity);
 		b.transform.SetParent(respawnPoint[1].transform);
-		b=Instantiate(block[2], respawnPoint[2].transform.position, Quaternion.identity);
+		b=Instantiate(block[5], respawnPoint[2].transform.position, Quaternion.identity);
 		b.transform.SetParent(respawnPoint[2].transform);
 	}
 	
@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour {
 		}
 		if(respawnPoint[2].transform.childCount==0)
 		{
-			b=Instantiate(block[2], respawnPoint[2].transform.position, Quaternion.identity);
+			b=Instantiate(block[5], respawnPoint[2].transform.position, Quaternion.identity);
 			b.transform.SetParent(respawnPoint[2].transform);
 		}
 		/*int layerMask=1 << 9;
