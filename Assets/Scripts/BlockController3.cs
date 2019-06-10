@@ -140,6 +140,7 @@ public class BlockController3 : MonoBehaviour {
 				//boScript=hit.gameObject.GetComponent<BlockOverLapping2>();
 				bs[i].SetColor(blocklColor.color);
 				bs[i].fill=true;
+				//add score here
 				if(i==num_Child-1)
 				Destroy(gameObject);	
 			}
@@ -173,15 +174,15 @@ public class BlockController3 : MonoBehaviour {
 		if((go.rotation.eulerAngles.z>=59 && go.rotation.eulerAngles.z<=61) ||
 			(go.rotation.eulerAngles.z>=179 && go.rotation.eulerAngles.z<=181) ||
 			(go.rotation.eulerAngles.z>=299 && go.rotation.eulerAngles.z<=301))
-			{
-				return 2;
-			}
+		{
+			return 2;
+		}
 		else if((go.rotation.eulerAngles.z>=119 && go.rotation.eulerAngles.z<=121) ||
 				(go.rotation.eulerAngles.z>=239 && go.rotation.eulerAngles.z<=241) ||
 				(go.rotation.eulerAngles.z>=-1 && go.rotation.eulerAngles.z<=1))
-			{
-				return 1;
-			}
+		{
+			return 1;
+		}
 		else
 			return 0;
 	}

@@ -138,7 +138,7 @@ public class BoardGenerator : MonoBehaviour {
 			pos.x=ini.x+horizontal_dis/2;
 		}
 	}
-	//Check single double triple
+	//Check single double triple add score
 	void CheckHexa()
 	{
 		Color c;
