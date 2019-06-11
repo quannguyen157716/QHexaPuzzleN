@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoardGenerator : MonoBehaviour {
+	public Scoring ScoreDriver;
 	public GameObject block;
 	public float x;
 	public float y;
@@ -163,7 +164,7 @@ public class BoardGenerator : MonoBehaviour {
 							hex[i+1,a].Empty();
 							hex[i+1,a+1].Empty();
 							hex[i+1,a+2].Empty();
-
+							ScoreDriver.ScoreSingle();
 							try
 							{
 								if(hex[i,a+3].fill && hex[i,a+3].boardColor.color== c)//check double hexa first case 
@@ -176,6 +177,7 @@ public class BoardGenerator : MonoBehaviour {
 											hex[i,a+4].Empty();
 											hex[i+1,a+3].Empty();
 											hex[i+1,a+4].Empty();
+											ScoreDriver.ScoreDouble();
 										}
 										//Check triple
 										if(hex[i+2,a+1].fill && hex[i+2,a+1].boardColor.color==c)
@@ -185,6 +187,7 @@ public class BoardGenerator : MonoBehaviour {
 												hex[i+2,a+1].Empty();
 												hex[i+2,a+2].Empty();
 												hex[i+2,a+3].Empty();
+												ScoreDriver.ScoreTriple();
 											}
 										}
 									}
@@ -206,6 +209,7 @@ public class BoardGenerator : MonoBehaviour {
 										hex[i+2,a+1].Empty();
 										hex[i+2,a+2].Empty();
 										hex[i+2,a+3].Empty();	
+										ScoreDriver.ScoreDouble();
 										//Check triple 
 										if(hex[i+1,a-1].fill && hex[i+1,a-1].boardColor.color==c)	
 										{
@@ -215,6 +219,7 @@ public class BoardGenerator : MonoBehaviour {
 												hex[i+1,a-1].Empty();
 												hex[i+2,a-1].Empty();
 												hex[i+2,a].Empty();
+												ScoreDriver.ScoreTriple();
 											}
 										}					
 									}
@@ -236,6 +241,7 @@ public class BoardGenerator : MonoBehaviour {
 										hex[i+2,a-1].Empty();
 										hex[i+2,a].Empty();
 										hex[i+2,a+1].Empty();
+										ScoreDriver.ScoreDouble();
 									}
 								}
 							}
@@ -273,6 +279,7 @@ public class BoardGenerator : MonoBehaviour {
 							hex[i+1,a].Empty();
 							hex[i+1,a+1].Empty();
 							hex[i+1,a+2].Empty();
+							ScoreDriver.ScoreSingle();
 							try //check double hexa
 							{
 								if(hex[i,a+3].fill)
@@ -285,6 +292,7 @@ public class BoardGenerator : MonoBehaviour {
 											hex[i,a+4].Empty();
 											hex[i+1,a+3].Empty();
 											hex[i+1,a+4].Empty();
+											ScoreDriver.ScoreDouble();
 										}
 										//Check triple
 										if(hex[i+2,a+1].fill && hex[i+2,a+1].boardColor.color==c)
@@ -294,6 +302,7 @@ public class BoardGenerator : MonoBehaviour {
 												hex[i+2,a+1].Empty();
 												hex[i+2,a+2].Empty();
 												hex[i+2,a+3].Empty();
+												ScoreDriver.ScoreTriple();
 											}
 										}
 									}
@@ -315,6 +324,7 @@ public class BoardGenerator : MonoBehaviour {
 										hex[i+2,a+1].Empty();
 										hex[i+2,a+2].Empty();
 										hex[i+2,a+3].Empty();	
+										ScoreDriver.ScoreDouble();
 										//Check triple 
 										if(hex[i+1,a-1].fill && hex[i+1,a-1].boardColor.color==c)	
 										{
@@ -324,6 +334,7 @@ public class BoardGenerator : MonoBehaviour {
 												hex[i+1,a-1].Empty();
 												hex[i+2,a-1].Empty();
 												hex[i+2,a].Empty();
+												ScoreDriver.ScoreTriple();
 											}
 										}					
 									}
@@ -347,6 +358,7 @@ public class BoardGenerator : MonoBehaviour {
 										hex[i+2,a-1].Empty();
 										hex[i+2,a].Empty();
 										hex[i+2,a+1].Empty();
+										ScoreDriver.ScoreDouble();
 									}
 								}
 							}

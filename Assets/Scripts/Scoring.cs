@@ -6,30 +6,34 @@ using UnityEngine.UI;
 public class Scoring : MonoBehaviour {
 	int currentScore;
 	public Text textScore;
-	
+	public  int point,single,doubleC,tripleC;
 	void Start () {
 		
 	}
 	
 	void Update () {
-		
+		UpdateScore();
 	}
 
-	void ScoreSingle()
+	public void ScoreSingle()
 	{
-		
+		currentScore+=single;
 	}
 
-	void ScoreDouble()
+	public void ScoreDouble()
 	{
-		
+		currentScore+=doubleC;
 	}
 
-	void ScoreTriple()
+	public void ScoreTriple()
 	{
-		
+		currentScore+=tripleC;
 	}
 
+	public void ScorePoint()
+	{
+		currentScore+=point;
+	}
 	void UpdateScore()
 	{
 		textScore.text=currentScore.ToString();

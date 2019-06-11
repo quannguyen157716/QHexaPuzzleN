@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BlockController3 : MonoBehaviour {
+	Scoring ScoreDriver;
 	float distance = 1;//distance from camera to object
     //SpriteRenderer render;
 	SpriteRenderer blocklColor;
@@ -11,12 +12,14 @@ public class BlockController3 : MonoBehaviour {
 	//GameController gameDriverScript;
     Vector3 origin;
 	int num_Child;
-
+	GameObject board;
  void Start()
     {
         origin=transform.position;
 		num_Child=transform.childCount;
 		blocklColor=GetComponent<SpriteRenderer>();
+		board=GameObject.FindGameObjectWithTag("Board");
+		ScoreDriver=board.GetComponent<Scoring>();
     }
     /* void Update()
 	{       	
@@ -91,13 +94,11 @@ public class BlockController3 : MonoBehaviour {
 			} 
 			
 }*/
-
     void OnMouseDrag()
 	{
         Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance);
         Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
-        transform.position = objPosition;
-      
+        transform.position = objPosition;  
 	}
 
 	void OnMouseUp()//Drop
@@ -109,7 +110,6 @@ public class BlockController3 : MonoBehaviour {
 		//Check if block fits board
 		try
 		{
-			//hit = Physics2D.OverlapPoint(transform.GetChild(0).transform.position, layerMask);
 			for(int i=0; i<num_Child; i++)
 			{
 				hit = Physics2D.OverlapPoint(transform.GetChild(i).transform.position, layerMask);
@@ -135,11 +135,9 @@ public class BlockController3 : MonoBehaviour {
 
 			for(int i=0; i<num_Child; i++)
 			{
-				Debug.Log("dfdfd");
-				//hit = Physics2D.OverlapPoint(transform.GetChild(i).transform.position, layerMask);
-				//boScript=hit.gameObject.GetComponent<BlockOverLapping2>();
 				bs[i].SetColor(blocklColor.color);
 				bs[i].fill=true;
+				ScoreDriver.ScorePoint();
 				//add score here
 				if(i==num_Child-1)
 				Destroy(gameObject);	
