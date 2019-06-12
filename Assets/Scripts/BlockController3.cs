@@ -115,7 +115,7 @@ public class BlockController3 : MonoBehaviour {
 				hit = Physics2D.OverlapPoint(transform.GetChild(i).transform.position, layerMask);
 				if(!hit)
 				{
-					Debug.Log("N hit");
+					//Debug.Log("N hit");
 					ResetToOrigin();
 					return;
 				}
@@ -125,20 +125,20 @@ public class BlockController3 : MonoBehaviour {
 					if(CheckRotation(hit.transform)!=CheckRotation(transform.GetChild(i).transform) || boScript.fill)
 					{
 						ResetToOrigin();
-						Debug.Log("s");
+						//Debug.Log("s");
 						return;
 					}
 					else
 					bs[i]=boScript;
 				}
 			}
-
+			
 			for(int i=0; i<num_Child; i++)
 			{
 				bs[i].SetColor(blocklColor.color);
 				bs[i].fill=true;
 				ScoreDriver.ScorePoint();
-				//add score here
+				//add score here 
 				if(i==num_Child-1)
 				Destroy(gameObject);	
 			}
