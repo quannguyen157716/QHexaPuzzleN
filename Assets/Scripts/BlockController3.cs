@@ -184,4 +184,18 @@ public class BlockController3 : MonoBehaviour {
 		else
 			return 0;
 	}
+
+	public void SetColor(Color color)
+	{
+		Debug.Log(num_Child);
+		for(int i=0; i<transform.childCount;i++)
+		{
+			blocklColor=transform.GetChild(i).GetComponent<SpriteRenderer>();
+			blocklColor.color=color;
+			Debug.Log("tna");
+		}
+		blocklColor=gameObject.GetComponent<SpriteRenderer>();
+		blocklColor.color=color;
+	}
 }
+
