@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoardGenerator : MonoBehaviour {
+	ComPoundBlock1_Gover cp1gv;
 	public Scoring ScoreDriver;
 	public GameObject block;
 	public float x;
@@ -22,6 +23,7 @@ public class BoardGenerator : MonoBehaviour {
 	{
 		ini_Pos=new Vector3(x,y);
 		CreateBoard();
+		GameOver();
 		//Destroy(hexa[0,2]);
 		//Debug.Log(hex[0,2].fill);
 	}
@@ -140,6 +142,30 @@ public class BoardGenerator : MonoBehaviour {
 		}
 	}
 	//Check single double triple add score
+	void GameOver()
+	{
+		bool gv=false;
+		for(int i=0; i<6;i++)
+		{
+			for(int j=0; j<11;j++)
+			{
+				if(hex[i,j]!=null && !hex[i,j].fill)
+				{
+					gv=false;
+					return;
+				}
+				else if(hex[i,j]!=null && hex[i,j].fill)
+				gv=true;
+				else
+				continue;
+			}
+		}
+		if(gv)
+		Debug.Log("game over");
+		else
+		Debug.Log("not game over");
+	}
+
 	void CheckHexa()
 	{
 		Color c;
@@ -233,7 +259,6 @@ public class BoardGenerator : MonoBehaviour {
 									if(hex[i+1,a-1].fill && hex[i+1,a-1].boardColor.color==c)
 									{
 									//double hexa left hand side
-									Debug.Log("LHexa");
 									if(hex[i+2,a-1].boardColor.color== c && hex[i+2,a].boardColor.color==c&&hex[i+2,a+1].boardColor.color==c)
 									{
 										Debug.Log("Left hexa");
@@ -330,7 +355,6 @@ public class BoardGenerator : MonoBehaviour {
 										{
 											if(hex[i+2,a-1].boardColor.color== c && hex[i+2,a].boardColor.color==c)
 											{
-												Debug.Log("Fuckkkkkk");
 												hex[i+1,a-1].Empty();
 												hex[i+2,a-1].Empty();
 												hex[i+2,a].Empty();
@@ -377,6 +401,7 @@ public class BoardGenerator : MonoBehaviour {
 		}
 	}
 }
+
 
 
 

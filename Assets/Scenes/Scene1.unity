@@ -897,7 +897,7 @@ Prefab:
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: block.Array.data[5].weight
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
@@ -1142,7 +1142,7 @@ MonoBehaviour:
   - block: {fileID: 1138830838767188, guid: fb9ac57d85f88b941bec5fbfbdbe4021, type: 2}
     weight: 60
   - block: {fileID: 1275684285337558, guid: f04ca2ad70d8aab49bdfa678250f9aed, type: 2}
-    weight: 40
+    weight: 20
   - block: {fileID: 1978570120468922, guid: 561e080e8008c4f40ae7df188f641169, type: 2}
     weight: 40
   - block: {fileID: 1307215775849612, guid: 929ce8733858d8b45be6cdb412655505, type: 2}

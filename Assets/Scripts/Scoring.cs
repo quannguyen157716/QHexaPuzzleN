@@ -7,9 +7,6 @@ public class Scoring : MonoBehaviour {
 	int currentScore;
 	public Text textScore;
 	public  int point,single,doubleC,tripleC;
-	void Start () {
-		
-	}
 	
 	void Update () {
 		UpdateScore();

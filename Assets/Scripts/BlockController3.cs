@@ -191,7 +191,6 @@ public class BlockController3 : MonoBehaviour {
 		{
 			blocklColor=transform.GetChild(i).GetComponent<SpriteRenderer>();
 			blocklColor.color=color;
-			Debug.Log("tna");
 		}
 		blocklColor=gameObject.GetComponent<SpriteRenderer>();
 		blocklColor.color=color;
