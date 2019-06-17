@@ -149,11 +149,11 @@ public class BlockController3 : MonoBehaviour {
 			return;
 		}
 		   
-		if(gameObject.tag=="CompoundBlock")
+		/* if(gameObject.tag=="CompoundBlock")
         {
             if(gameObject.transform.childCount==0)
             Destroy(gameObject);
-        }
+        }*/
 	}
 
     public void ResetToOrigin()
@@ -187,7 +187,6 @@ public class BlockController3 : MonoBehaviour {
 
 	public void SetColor(Color color)
 	{
-		Debug.Log(num_Child);
 		for(int i=0; i<transform.childCount;i++)
 		{
 			blocklColor=transform.GetChild(i).GetComponent<SpriteRenderer>();

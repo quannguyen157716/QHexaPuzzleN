@@ -15,12 +15,25 @@ public class GameController : MonoBehaviour {
 	int totalWeight_B;
 	int totalWeight_C;
 	GameObject b;
+	int[] item=new int[7];
 	void Start () {
-		for(int i=0; i< block.Length-3; i++)
+		for(int i=0; i< block.Length-1; i++)
 		{
 			totalWeight_B+=block[i].weight;
+		}
+
+		for(int i=0; i< color.Length-3; i++)
+		{
 			totalWeight_C+=color[i].weight;
 		}
+
+		for(int i=0; i<=10000;i++)
+		{
+			CraftBlock(totalWeight_B,totalWeight_C);
+		}
+
+		for(int i=0; i< item.Length;i++)
+		Debug.Log("Item:"+item[i]);
 		SpawnBlock();
 		/* b=Instantiate(block[0], respawnPoint[0].transform.position, Quaternion.identity);
 		b.transform.SetParent(respawnPoint[0].transform);
@@ -58,12 +71,12 @@ public class GameController : MonoBehaviour {
 	{
 		int rand1=Random.Range(1,totalWeight_B+1);
 		int rand2=Random.Range(1, totalWeight_C+1);
-
-		for(int i=0; i< block.Length-3; i++)
+		for(int i=0; i< block.Length-1; i++)
 		{
 			rand1-=block[i].weight;
 			if(rand1<=0)
 			{
+				item[i]++;
 				blockToSpawn=block[i].block;
 				break;
 			}

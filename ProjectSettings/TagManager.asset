@@ -8,7 +8,6 @@ TagManager:
   - Block
   - CompoundBlock
   - BoardBlock
-  - Buffer
   - Board
   layers:
   - Default

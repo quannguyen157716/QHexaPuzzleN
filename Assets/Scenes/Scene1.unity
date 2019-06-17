@@ -872,42 +872,42 @@ Prefab:
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: block.Array.data[0].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: block.Array.data[1].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: block.Array.data[2].weight
-      value: 8
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: block.Array.data[3].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: block.Array.data[4].weight
-      value: 8
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: block.Array.data[5].weight
-      value: 6
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: block.Array.data[6].weight
-      value: 6
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: block.Array.data[7].weight
-      value: 5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
@@ -932,7 +932,7 @@ Prefab:
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: color.Array.data[0].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
@@ -957,7 +957,7 @@ Prefab:
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: color.Array.data[1].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
@@ -982,7 +982,7 @@ Prefab:
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: color.Array.data[2].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
@@ -997,7 +997,7 @@ Prefab:
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: color.Array.data[3].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
@@ -1022,7 +1022,7 @@ Prefab:
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: color.Array.data[4].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
@@ -1047,7 +1047,7 @@ Prefab:
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: color.Array.data[5].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
@@ -1067,7 +1067,7 @@ Prefab:
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: color.Array.data[6].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
@@ -1092,7 +1092,7 @@ Prefab:
     - target: {fileID: 114063126329497718, guid: 81aa57d55c160d34d97fab74b27d2180,
         type: 2}
       propertyPath: color.Array.data[7].weight
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81aa57d55c160d34d97fab74b27d2180, type: 2}
@@ -1132,38 +1132,38 @@ MonoBehaviour:
   - {fileID: 606234544}
   block:
   - block: {fileID: 1387437768623816, guid: 6c2a4820534802149917c53186a5ae57, type: 2}
-    weight: 10
+    weight: 100
   - block: {fileID: 1038314264763868, guid: df920f8283142094889bbee123733c81, type: 2}
-    weight: 10
+    weight: 100
   - block: {fileID: 1481544912526206, guid: 65a897a7dde554ed69574555e8879f38, type: 2}
-    weight: 8
+    weight: 60
   - block: {fileID: 1227730999115598, guid: 3c4cd313393b9412bae2c1fd0f30fc2c, type: 2}
-    weight: 10
+    weight: 100
   - block: {fileID: 1138830838767188, guid: fb9ac57d85f88b941bec5fbfbdbe4021, type: 2}
-    weight: 8
+    weight: 60
   - block: {fileID: 1275684285337558, guid: f04ca2ad70d8aab49bdfa678250f9aed, type: 2}
-    weight: 6
+    weight: 40
   - block: {fileID: 1978570120468922, guid: 561e080e8008c4f40ae7df188f641169, type: 2}
-    weight: 6
+    weight: 40
   - block: {fileID: 1307215775849612, guid: 929ce8733858d8b45be6cdb412655505, type: 2}
-    weight: 5
+    weight: 30
   color:
   - color: {r: 0.1795523, g: 0.18455146, b: 0.9044118, a: 1}
-    weight: 10
+    weight: 100
   - color: {r: 0.90094566, g: 0.1273789, b: 0.9117647, a: 1}
-    weight: 10
+    weight: 100
   - color: {r: 0.578, g: 0.18317476, b: 0.8897059, a: 1}
-    weight: 10
+    weight: 100
   - color: {r: 1, g: 0, b: 0, a: 1}
-    weight: 10
+    weight: 100
   - color: {r: 0.9852941, g: 0.522026, b: 0.10142732, a: 1}
-    weight: 10
+    weight: 100
   - color: {r: 0.010596896, g: 0.7205882, b: 0.015493347, a: 1}
-    weight: 10
+    weight: 100
   - color: {r: 1, g: 0.766, b: 0, a: 1}
-    weight: 10
+    weight: 100
   - color: {r: 0.5172415, g: 0.5, b: 1, a: 1}
-    weight: 10
+    weight: 100
 --- !u!4 &1677956499
 Transform:
   m_ObjectHideFlags: 0
@@ -1297,7 +1297,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737136761458502, guid: 6bb3885e1ea484c3897540b3c32e4406, type: 2}
       propertyPath: m_TagString
-      value: BoardBlock
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 212027727268839118, guid: 6bb3885e1ea484c3897540b3c32e4406,
         type: 2}

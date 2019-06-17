@@ -10,12 +10,12 @@ public class SBlockController : MonoBehaviour {
     //GameObject gameDriver;
 	//GameController gameDriverScript;
     Vector3 origin;
-	int num_Child;
+	//int num_Child;
 
  void Start()
     {
         origin=transform.position;
-		num_Child=transform.childCount;
+		//num_Child=transform.childCount;
 		blocklColor=GetComponent<SpriteRenderer>();
     }
     /* void Update()
