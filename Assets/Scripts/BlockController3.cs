@@ -8,7 +8,7 @@ public class BlockController3 : MonoBehaviour {
     //SpriteRenderer render;
 	SpriteRenderer blocklColor;
 	BlockOverLapping2 boScript;
-    //GameObject gameDriver;
+    //GameObject gameDriver;                                                                                                                 
 	//GameController gameDriverScript;
     Vector3 origin;
 	int num_Child;
@@ -125,7 +125,7 @@ public class BlockController3 : MonoBehaviour {
 					if(CheckRotation(hit.transform)!=CheckRotation(transform.GetChild(i).transform) || boScript.fill)
 					{
 						ResetToOrigin();
-						//Debug.Log("s");
+						//Debug.Log("s");//
 						return;
 					}
 					else

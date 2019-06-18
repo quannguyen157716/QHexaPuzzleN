@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoardGenerator : MonoBehaviour {
-	public GameObject gameController;
-	GameController gameCtrScript;
+	//public GameObject gameController;
+	//GameController gameCtrScript;
 	ComPoundBlock1_Gover cp1gv;
 	public Scoring ScoreDriver;
 	public GameObject block;
@@ -25,7 +25,7 @@ public class BoardGenerator : MonoBehaviour {
 	{
 		ini_Pos=new Vector3(x,y);
 		CreateBoard();
-		gameCtrScript=gameController.GetComponent<GameController>();
+		//gameCtrScript=gameController.GetComponent<GameController>();
 		//Destroy(hexa[0,2]);
 		//Debug.Log(hex[0,2].fill);
 	}
@@ -34,7 +34,7 @@ public class BoardGenerator : MonoBehaviour {
 	{
 		//if(Input.GetMouseButtonUp(0))
 		//{
-			CheckHexa();
+			CheckHexa();//
 			GameOver();
 		//}
 	}
@@ -170,6 +170,7 @@ public class BoardGenerator : MonoBehaviour {
 		else
 		Debug.Log("not game over");
 	}
+
 
 	void CheckHexa()
 	{

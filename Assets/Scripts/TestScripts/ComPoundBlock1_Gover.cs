@@ -5,6 +5,13 @@ using UnityEngine;
 public class ComPoundBlock1_Gover : MonoBehaviour {
 
 	public GameObject board;
+	BoardGenerator boardGeScript;
 
+	void Start()
+    {
+       boardGeScript=board.GetComponent<BoardGenerator>();
+    }
+
+	
 	
 }
