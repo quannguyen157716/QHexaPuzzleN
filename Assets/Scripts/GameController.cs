@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour {
 		//	CraftBlock(totalWeight_B,totalWeight_C);
 		//}
 
-		
+		//
 		//SpawnBlock();
 		/* b=Instantiate(block[0], respawnPoint[0].transform.position, Quaternion.identity);
 		b.transform.SetParent(respawnPoint[0].transform);
@@ -125,6 +125,4 @@ public class GameController : MonoBehaviour {
 		}
 		
 	}
-
-
 }

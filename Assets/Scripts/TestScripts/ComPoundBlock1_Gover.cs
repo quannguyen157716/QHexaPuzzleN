@@ -12,6 +12,6 @@ public class ComPoundBlock1_Gover : MonoBehaviour {
        boardGeScript=board.GetComponent<BoardGenerator>();
     }
 
-	
+	//
 	
 }
