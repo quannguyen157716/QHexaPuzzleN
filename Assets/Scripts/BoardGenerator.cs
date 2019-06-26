@@ -19,11 +19,11 @@ public class BoardGenerator : MonoBehaviour {
 	//int rotation;
 	//int[,] status=new int[6,11];
 	GameObject[,] hexa=new GameObject[6,11];
-	BlockOverLapping2[,] hex=new BlockOverLapping2[6,11];
-
+	public BlockOverLapping2[,] hex=new BlockOverLapping2[6,11];
 	void Start () 
 	{
 		ini_Pos=new Vector3(x,y);
+		cp1gv=GetComponent<ComPoundBlock1_Gover>();
 		CreateBoard();
 		//gameCtrScript=gameController.GetComponent<GameController>();
 		//Destroy(hexa[0,2]);
@@ -147,7 +147,7 @@ public class BoardGenerator : MonoBehaviour {
 	//Check single double triple add score
 	void GameOver()
 	{
-		bool gv=false;
+		/* bool gv=false;
 		int pi=0,pj=0;//position in array
 		for(int i=pi; i<6;i++)
 		{
@@ -168,7 +168,12 @@ public class BoardGenerator : MonoBehaviour {
 		if(gv)
 		Debug.Log("game over");
 		else
-		Debug.Log("not game over");
+		Debug.Log("not game over"); */
+		if(!cp1gv.EmptyCP1())
+		{
+			Debug.Log("Game over");
+		}
+
 	}
 
 

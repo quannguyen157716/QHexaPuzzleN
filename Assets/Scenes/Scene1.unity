@@ -1191,6 +1191,7 @@ GameObject:
   - component: {fileID: 1757915274}
   - component: {fileID: 1757915275}
   - component: {fileID: 1757915273}
+  - component: {fileID: 1757915276}
   m_Layer: 0
   m_Name: Board
   m_TagString: Board
@@ -1247,6 +1248,18 @@ MonoBehaviour:
   vertical_dis: 0.78
   rows: 3
   numberOfBlockFirstRow: 3
+--- !u!114 &1757915276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1757915272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb21e55072f7b4e378ed7b53992ffd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  board: {fileID: 1757915272}
 --- !u!1001 &2114003754
 Prefab:
   m_ObjectHideFlags: 0
