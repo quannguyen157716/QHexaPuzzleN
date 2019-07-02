@@ -14,7 +14,7 @@ public class BlockController3 : MonoBehaviour {
     Vector3 origin;
 	int num_Child;
 	GameObject board;
-	public int offset;
+	
  void Start()
     {
         origin=transform.position;
@@ -99,7 +99,7 @@ public class BlockController3 : MonoBehaviour {
 }*/
     void OnMouseDrag()
 	{
-        Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y+offset, distance);
+        Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance);
         Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
         transform.position = objPosition;  
 	}
