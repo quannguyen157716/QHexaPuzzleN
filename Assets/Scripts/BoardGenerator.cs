@@ -34,8 +34,8 @@ public class BoardGenerator : MonoBehaviour {
 	{
 		//if(Input.GetMouseButtonUp(0))
 		//{
-			CheckHexa();//
-			GameOver();
+			//CheckHexa();//
+			//GameOver();
 		//}
 	}
 	
@@ -177,7 +177,7 @@ public class BoardGenerator : MonoBehaviour {
 	}
 
 
-	void CheckHexa()
+	public void CheckHexa()
 	{
 		Color c;
 		int a=2;

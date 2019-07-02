@@ -27,25 +27,14 @@ public class GameController : MonoBehaviour {
 			totalWeight_C+=color[i].weight;
 		}
 
-		//for(int i=0; i<=10000;i++)
-		//{
-		//	CraftBlock(totalWeight_B,totalWeight_C);
-		//}
-
-		//
-		//SpawnBlock();
-		/* b=Instantiate(block[0], respawnPoint[0].transform.position, Quaternion.identity);
-		b.transform.SetParent(respawnPoint[0].transform);
-		b=Instantiate(block[1], respawnPoint[1].transform.position, Quaternion.identity);
-		b.transform.SetParent(respawnPoint[1].transform);
-		b=Instantiate(block[5], respawnPoint[2].transform.position, Quaternion.identity);
-		b.transform.SetParent(respawnPoint[2].transform);
-		*/
+	
+	
 	}                                  
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		/* 
 		blockToSpawn=block[0].block;
 		if(respawnPoint[0].transform.childCount==0)
 		{
@@ -63,25 +52,8 @@ public class GameController : MonoBehaviour {
 		{
 			b=Instantiate(blockToSpawn, respawnPoint[2].transform.position, Quaternion.identity);
 			b.transform.SetParent(respawnPoint[2].transform);
-		}
-		//SpawnBlock();
-		/* if(respawnPoint[0].transform.childCount==0)
-		{
-			b=Instantiate(block[0], respawnPoint[0].transform.position, Quaternion.identity);
-			b.transform.SetParent(respawnPoint[0].transform);
-		}
-
-		if(respawnPoint[1].transform.childCount==0)
-		{
-			b=Instantiate(block[1], respawnPoint[1].transform.position, Quaternion.identity);
-			b.transform.SetParent(respawnPoint[1].transform);
-		}
-		if(respawnPoint[2].transform.childCount==0)
-		{
-			b=Instantiate(block[5], respawnPoint[2].transform.position, Quaternion.identity);
-			b.transform.SetParent(respawnPoint[2].transform);
-		} */
-	
+		}*/
+		SpawnBlock();	
 	}
 
 	void CraftBlock(int total_weight, int totalWeight_C)

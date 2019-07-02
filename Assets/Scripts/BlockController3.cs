@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BlockController3 : MonoBehaviour {
 	Scoring ScoreDriver;
+	BoardGenerator boardGr;
 	float distance = 1;//distance from camera to object
     //SpriteRenderer render;
 	SpriteRenderer blocklColor;
@@ -13,6 +14,7 @@ public class BlockController3 : MonoBehaviour {
     Vector3 origin;
 	int num_Child;
 	GameObject board;
+	public int offset;
  void Start()
     {
         origin=transform.position;
@@ -20,6 +22,7 @@ public class BlockController3 : MonoBehaviour {
 		blocklColor=GetComponent<SpriteRenderer>();
 		board=GameObject.FindGameObjectWithTag("Board");
 		ScoreDriver=board.GetComponent<Scoring>();
+		boardGr=board.GetComponent<BoardGenerator>();
     }
     /* void Update()
 	{       	
@@ -96,7 +99,7 @@ public class BlockController3 : MonoBehaviour {
 }*/
     void OnMouseDrag()
 	{
-        Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, distance);
+        Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y+offset, distance);
         Vector3 objPosition = Camera.main.ScreenToWorldPoint (mousePosition);
         transform.position = objPosition;  
 	}
@@ -140,7 +143,10 @@ public class BlockController3 : MonoBehaviour {
 				ScoreDriver.ScorePoint();
 				//add score here 
 				if(i==num_Child-1)
-				Destroy(gameObject);	
+				{
+					Destroy(gameObject);
+					boardGr.CheckHexa();
+				}
 			}
 		}
 		catch
