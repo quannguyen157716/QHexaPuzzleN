@@ -14,7 +14,7 @@ public class BlockController3 : MonoBehaviour {
     Vector3 origin;
 	int num_Child;
 	GameObject board;
-	
+	float angle;
  void Start()
     {
         origin=transform.position;
@@ -174,16 +174,17 @@ public class BlockController3 : MonoBehaviour {
 
 	int CheckRotation(Transform go)
 	{
+		angle=go.rotation.eulerAngles.z;
 		//return 2 if reversed triangle, 1 if regular triangle, 0 not identified
-		if((go.rotation.eulerAngles.z>=59 && go.rotation.eulerAngles.z<=61) ||
-			(go.rotation.eulerAngles.z>=179 && go.rotation.eulerAngles.z<=181) ||
-			(go.rotation.eulerAngles.z>=299 && go.rotation.eulerAngles.z<=301))
+		if((angle>=59 && angle<=61) ||
+			(angle>=179 && angle<=181) ||
+			(angle>=299 && angle<=301))
 		{
 			return 2;
 		}
-		else if((go.rotation.eulerAngles.z>=119 && go.rotation.eulerAngles.z<=121) ||
-				(go.rotation.eulerAngles.z>=239 && go.rotation.eulerAngles.z<=241) ||
-				(go.rotation.eulerAngles.z>=-1 && go.rotation.eulerAngles.z<=1))
+		else if((angle>=119 && angle<=121) ||
+				(angle>=239 && angle<=241) ||
+				(angle>=-1 && angle<=1))
 		{
 			return 1;
 		}
